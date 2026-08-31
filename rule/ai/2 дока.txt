@@ -1,0 +1,16 @@
+Документация составляющих WM
+
+На этапе создания `aidocs` и `man` требуется описать не только каталоги, но
+и фактические связи:
+
+- bootstrap `web`, site IQ и project IQ;
+- resource layer, каждый named RM, manager, component connectors и templates;
+- pages v2, PHP-router, `.htaccess`, API-router и границу с `vue-router`;
+- все PHP-функции из `web/php`, включая вызываемые локальные подфункции;
+- CSS, JavaScript, fonts, images, `_i()`, `_i::`, `uv`, `wd`, `mqr`;
+- current, blank, legacy, planned и known-issues как разные статусы.
+
+Для каждого API указывать точный файл, назначение, сигнатуру/форму вызова,
+зависимости, реального потребителя и способ проверки. Не копировать большие
+исходники и продуктовые JSON. Human-facing структура находится в `man/wm`,
+agent-first карта — в `aidocs`.

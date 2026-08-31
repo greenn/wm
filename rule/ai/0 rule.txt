@@ -1,0 +1,84 @@
+WM rule/ai — оглавление и маршрут чтения
+
+Назначение
+
+`rule/ai` — нормализованный, исполняемый набор правил для будущего Codex. Он
+создан на основе концептуальных черновиков `rule/dd`, ответов владельца и
+проверенной реализации WM. При противоречии применяется порядок из `= tsk.txt`.
+
+Быстрый старт
+
+1. Прочитать `= tsk.txt`.
+2. Прочитать `0 owner-decisions.md`.
+3. Открыть только относящиеся к задаче документы разделов 0–4.
+4. Для выполнения большого задания использовать этапы `=0.txt` — `=5.txt`.
+
+Раздел 0 — базовые правила
+
+- `0 rule.txt` — это оглавление.
+- `0 owner-decisions.md` — обязательные решения владельца.
+- `0 project-principles.md` — философия и режим безопасной разработки.
+- `0 r (resource-module).md` — базовая модель resource layer и RM.
+- `0 версионность.md` — отдельные версии WM и web, повышение PATCH.
+- `0 git.txt` — атомарные commits и отправка в main.
+- `0 log.txt` — журнал входных заданий, расширенных ТЗ и результатов.
+- `0 exclude.txt` — закрытые области, JSON, секреты и project overlays.
+- `0 пояснения (titlt,log).txt` — console logging, title и tooltip.
+- `0 logo.txt` — обязательное поведение логотипа.
+
+Раздел 1 — концепция разработки
+
+- `1 принцип программирования.txt` — прагматичный DRY.
+- `1 naming.txt` — naming нового кода и сохранение legacy.
+- `1 runtime-and-compatibility.md` — PHP 7.2, short tags и frontend runtime.
+- `1 terminology.md` — единый словарь WM.
+- `1 дока.txt` — синхронизация документации с изменениями.
+
+Раздел 2 — структура составляющих
+
+- `2.txt` — каноническая карта и метод построения `aidocs`.
+- `2 resource-layer.md`, `2 rm-connectors.md` — resource layer и три вида
+  connectors.
+- `2 rb.md`, `2 lay.md`, `2 site.md`, `2 admin.txt` — named RM и admin.
+- `2 iq.md`, `2 web.md`, `2 legacy web.txt` — environments/bootstrap.
+- `2 lib.md`, `2 php-functions.md` — libraries и PHP helpers/call chains.
+- `2 templates.md`, `2 pages-router.md`, `2 api-router.md`,
+  `2 htaccess.md` — rendering и HTTP routing.
+- `2 assets.md`, `2 fonts.md`, `2 images.md`, `2 vue.md` — frontend
+  resources.
+- `2 wd.md`, `2 mqr.md`, `2 uv.md` — dev comparison, runtime scaling и
+  cache busting.
+- `2 data-sources.md` — допустимые источники данных и границы чтения.
+- `2 wb.md` — planned WebBuilder без выдуманного API.
+- `2 дока.txt` — требования к документации составляющих.
+
+Главное правило раздела: описывать подтверждённый текущий API и отдельно
+помечать legacy, blank и будущие сущности.
+
+Раздел 3 — ведение проекта
+
+- `3 проект.txt`, `3 проект новый.txt`, `3 project-file-set.md`,
+  `3 wm-0.md` — project ownership и создание `wm-0`.
+- `3 экосистема.txt`, `3 vmk4.md`, `3 dot-projects.md` — WM и примеры.
+- `3 бланк.txt`, `3 blank-projects.md` — blank policy.
+- `3 man.md`, `3 aidocs.md`, `3 дока.txt` — две аудитории документации.
+- `3 test-policy.md`, `3 api.txt`, `3 legacy.txt`, `3 sug.txt` —
+  тесты, API, legacy и approval proposals.
+- `3 вокабуляр.txt` — проектный словарь.
+
+Раздел 4 — пояснения и референсы
+
+- `4 htaccess.txt` — короткая project policy для rewrite.
+- `4 test.txt` — default location URL-доступных тестов.
+- `4 дока.txt`, `4 legacy-reference-map.md` — старая документация и legacy
+  sources.
+- `4 known-issues.md` — наблюдённые implementation gaps, не скрытые fixes.
+- `4 man-ui.png` — UI reference для будущего Documentation Site.
+
+Статусы утверждений
+
+- `current` — подтверждено текущим v2-кодом и рекомендуется для нового кода;
+- `legacy` — существует для совместимости, но не используется как новый шаблон;
+- `blank` — структурная заготовка, которая может быть технически незавершённой;
+- `planned` — согласованное будущее направление без выдуманного API;
+- `proposal` — идея в `man/sug`, требующая approval.

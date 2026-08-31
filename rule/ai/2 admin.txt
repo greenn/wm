@@ -1,0 +1,25 @@
+Admin
+
+Каноническая физическая точка входа по умолчанию:
+
+    /admin/index.php
+
+Архитектура допускает другие имена и rewrite-варианты, но они должны быть явно
+заданы конкретным проектом. Старые `kot`, `admin2`, `ap` и rewrite
+`/admin -> /ap/router.php` являются примерами/legacy, а не новым каноном.
+
+PHP обслуживает initial request, authentication, authorization, API и fallback.
+`vue-router` может управлять историей уже загруженной Vue 3 админки, но прямой
+URL/reload обязан снова попадать в корректный server entry point.
+
+Безопасность:
+
+- каждое admin/API действие проверяет session/auth и права на сервере;
+- `v-if`, скрытая кнопка и client route guard не являются защитой;
+- settings и credentials не попадают в frontend bundle, логи и документацию;
+- ошибки не раскрывают filesystem paths, SQL и tokens;
+- CORS и HTTP methods задаются минимально необходимыми.
+
+Перед созданием новой админки проверить реальный named RM, IQ/bootstrap,
+физический `index.php`, API routes и rewrite chain. Не копировать legacy
+целиком.

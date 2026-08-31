@@ -1,0 +1,49 @@
+Этап 5 — тестовый проект wm-0
+
+Цель
+
+Создать новый project рядом с WM по адресу `J:\dv\wm-0` и проверить
+канонические v2 `iqSite`, `iqPro`, pages/router и named RM.
+
+Project-owned ядро
+
+```text
+J:\dv\wm-0\
+├── AGENTS.md
+├── iq.inc
+├── index.php
+├── test\
+└── <project-rm>\             # первый пример может называться gss3
+    ├── iq.inc
+    ├── pages\
+    ├── router\
+    └── r\
+```
+
+Стандартно копируются `r/rb` и `r/lay`. По реальной потребности добавляются
+`api`, `css`, `fonts`, `i`, `js`, `site`, `wd`; URL-version базы
+размещаются только в `site/uv`, host configuration — в `site/settings`.
+
+Правила
+
+- `AGENTS.md` содержит короткие инструкции именно для `wm-0`;
+- `rb` — обязательный named RM, `lay` архитектурно необязателен, но входит в
+  стандартный копируемый комплект владельца;
+- project RM содержит данные, pages, components и templates конкретного проекта;
+- local web подключается через `site/web/web[self].inc`;
+- для `wm-0` по умолчанию используется общий `J:\dv\wm\web`, а
+  host-specific `site/settings/settings[<domain>].inc` задаёт проверенную
+  shared connector-цепочку без копии `web`;
+- `man` не копируется: human-документация остаётся в WM;
+- PHP 7.2, `short_open_tag=On`, короткие PHP-теги, v2 и Vue 3 обязательны;
+- `.blank`/`.blank2` — только основа, пока не пройдены отдельные smoke tests;
+- legacy projects, product JSON, settings values и секреты не копируются.
+
+Проверка
+
+- bootstrap и стартовая page загружаются без fatal error;
+- base, обычная, `is-mod` и 404 pages разрешаются PHP-router;
+- `iqSite`, `iqPro`, `rb`, `lay` и project RM вызываются ожидаемо;
+- API, CSS/JS/fonts/images и `qv()` дают корректные responses;
+- client route Vue 3 работает при переходе, back/forward, прямом URL и reload;
+- root `test` и локальный `AGENTS.md` достаточны для продолжения работы.
