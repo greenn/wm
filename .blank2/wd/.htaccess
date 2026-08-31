@@ -1,0 +1,9 @@
+RewriteEngine on
+#RewriteRule reg index.php
+RewriteRule . index.php
+#RewriteRule . /api.php
+#RewriteRule . /rb/api/router.php
+
+#eg другой
+#RewriteCond %{REQUEST_FILENAME} !/api/index\.php
+#RewriteRule ^(.*)$ api/index.php

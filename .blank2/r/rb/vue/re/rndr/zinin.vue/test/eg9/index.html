@@ -1,0 +1,40 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@3.0.0-alpha.11/dist/vuetify.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="/test/eg9/styles.css.php" />
+    <script src="/js/lodash/4.17.21/lodash.min.js"></script>
+    <script src="/js/jquery/1.12.4/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/babel-polyfill/dist/polyfill.min.js"></script>
+    <script src="https://unpkg.com/vue@next/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vuetify@3.0.0-alpha.11/dist/vuetify.js"></script>
+</head>
+
+<body class="loading no_js">
+
+    <script type="text/x-template" id="app-template">
+        <v-app>
+            <div class="text-center">
+                <v-slider v-model="model" :max="rounded.length - 1" :tick-labels="rounded"></v-slider>
+
+                <div class="py-3"></div>
+
+                <v-sheet :class="radius" :max-width="model === 6 ? 128 : 256" class="mx-auto transition-swing secondary" elevation="12" height="128" width="100%"></v-sheet>
+
+                <div class="py-3"></div>
+
+                <code class="text-subtitle-1">.{{ radius }}</code>
+            </div>
+        </v-app>
+    </script>
+
+    <div id="app"></div>
+    <script src="/test/eg9/app.es6.js.php"></script>
+
+</body>

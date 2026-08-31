@@ -1,0 +1,86 @@
+site_catalog ¦ r/site/catalog/catalog.class.inc
+site_catalog_cats < site_mod ¦ r/site/catalog/catalog.class.inc:101
+        $modPid
+        $pn_infoDir
+        $pn_infoFile
+        $pn_infoItem
+        $pn_contentItem
+        path()
+        hasTpl()
+        getUriMap()
+    site_mod ¦ r/site/hp/site_mod.class.php.
+        getInfoFile()
+        getItemInfo() - //метод получения данных по id
+        getItemsInfo() - //получить список всех страниц
+        _getOrderItemsInfo()
+        _getAssocItemsInfo()
+        getItemByUri()
+        getItem()
+        addItemPageCtx()
+        addItemContentInfo()
+        itemLink()
+        getUriPid()
+site_catalog_items ¦ r/site/catalog/catalog-items.class.php
+    getItemByUri()
+    itemLink()
+
+-   -   -
+index
+    iq/config/router/catalog.php
+    r/site/catalog/catalog-titul.tpl.php
+
+cat
+    r/site/catalog/catalog.class.inc:100 ::site_catalog_cats{}
+        r/site/catalog/data/cats/tombs.data.inc
+
+
+item
+    r/site/catalog/catalog-items.class.php
+
+-   -   -   vue list
+
+    prod-section
+        prod-section.vue ¦ api iq/config/.dev/api
+            prod-list/prod-prod-filter.vue
+            prod-list/prod-list.vue / prod-list/prod-scroller.vue
+                prod-items.vue      ~       %item
+                        r/site/catalog/_db/products/parseItem.inc
+                        site_catalog_items::getItemByUri()
+
+    -   -   iq/config/pages/index.inc
+        array('catalog', 'prod-section', array(
+            'section' => 'tombs',
+            'main-headline' => 'Наши памятники',
+            'scroller' => true,
+        )),
+    -   -  r/site/catalog/list/tombs-list.tpl.php
+        _site::req_vue('catalog', 'prod-section');
+        <prod-section
+            section="tombs"
+            lim="7" lim-start="0"
+        ></prod-section>
+
+    -   -
+
+
+-   -   -   -   links eg
+
+getItemsInfo
+
+$itemData = site_catalog_items::getItemByUri($sectionName, $pageName, true);
+$sectionData = site_catalog_cats::getItemByUri($sectionName, true);
+
+-   -   -   -   links eg
+
+http://catalog.vmk.loc/pamyatniki/16
+
+
+-   -   -   -   links dd
+http://catalog.vmk.loc/tombs/1
+http://catalog.vmk.loc/pamyatniki/16
+http://catalog.vmk.loc/mogily/2
+
+http://katalog.vmk.loc/pamyatniki/16
+
+https://katalog.granitplace.ru/pamyatniki/16
+https://catalog.granitplace.ru/tombs/16

@@ -1,0 +1,159 @@
+-   -   -   -   re 2024-04
+each arg
+    setOptions
+        setOption
+        parseOption
+            parseStringOption
+            parseAssocOption
+        in stack
+    apply
+
+=	=	=	=	man
+
+для добавлении опции используется
+$headers->setOption($opt);
+	$opt = etag::ctxArg(array(
+		__FILE__,
+		etag::extra($var),
+	));
+
+=	=	=	=	steps
+получаем массив опций
+проходимся по каждой
+	если строка со знаком =, то превращаем в массив [prop=val]
+и добавляем в стек [stack] обработав [setOption]
+разбираем опции через [parseOption]
+	{s} могут быть с разделителем {:}
+	{aa} разбираем через parseAssocOption
+		 cache
+		 until
+		 max-age
+		 etag_file
+		 etag_ctx
+		 etag - [x]
+
+=	=	=	=
+# Headers
+    ^
+	stack
+	    //[va
+	        может в стек класть не { название => значения },
+            а { заголовок => true|false }
+	    ]
+
+	__construct()
+		.:: setOptions
+
+	setOptions()  // установка опций
+	    //прямо в .stack
+
+	merge_values:()  //объединяет два объекта в один,
+	    //который есть массив с данными для установки заголовков
+	    //[n без-self-рекурсии]
+
+	parseOption:()  //[tm]
+	    .:: parseStringOption | parseAssocOption | [parseOption + merge_values]
+
+	parseStringOption:()  //[tm]
+		//[: разделитель] ¦ [ разделитель - ':' ]
+
+	opt_cache:()  //опция: включение кеширования //[tu]
+	    //[
+	        true = cache-on
+	        false = cache-off
+	        .:: parseOption()
+	    ]
+
+
+	opt_until:()  //опция: кеширования на время //[tg]
+
+	parseAssocOption:()  //выявление опции из массива данных
+	    ^
+	    cache
+	        .:: opt_cache
+        until
+	        .:: opt_until
+        etag_file
+	        .:: etag.opt(autofile=path)
+        -etag
+        default
+
+	-delOption()
+
+	setOption() //установка данных в массив настроек для формирования заголовков
+
+
+	@ valuesGlue //¦'; '¦', '¦"\n"¦
+		//[, ] https://stackoverflow.com/questions/3096888/standard-for-adding-multiple-values-of-a-single-http-header-to-a-request-or-resp
+		//[; ] https://stackoverflow.com/questions/35761248/which-separator-should-be-used-in-the-content-type-header-for-a-multipart-data-r
+	prepare_output()  //формирование массива строковых заголовков
+	    //элемент = строка заголовка
+
+	prepare_assoc()  //формирование ассоциативного массива заголовков
+		//элемент = пара [название заголовка => тело заголовка]
+
+    apply()  //вывод заголовков
+        //из сформированного массива строковых заголовков
+
+
+-   -   -   -
+
+headers()  //выставляет http-заголовки
+    //если можно посылать заголовки
+    :() Headers
+    _:: apply()
+
+headers_obj()  //обёртка для [:# Headers ]
+headers_assoc()  //аллиас для [:# Headers _:: prepare_assoc()]
+-headers_upd()
+-headers_off()
+
+
+headersData()  //получение внутренних данных для заголовков
+    //через static хранение:
+        @ optStack = opt
+
+        @ valStack
+            js, -utf, utf8, js, css, json, html, png, ico, svg
+            nosniff
+            304
+            until, 1h, cache-on, cache-off
+
+
+-   -   -   -   [eg]
+
+headers('css', 'utf8', array('cache' => array('until' => 'next sunday'));
+
+headers('css', 'utf8', array('cache' => false));
+headers('css', 'utf8', 'cache-on');
+headers('css', 'utf8', 'cache-off');
+
+headers('css', 'utf8', array('cache' => 0 ? array('until' => 'next sunday') : false));
+
+-   -   -   -   [is]
+вижу что ест любые опции
+но на сколько надёжно:
+
+    $headers = array('utf8', 'nosniff', $headers);
+
+-   -   -   -   [pr]
+    собирать "Content-Typе" в правильном порядке
+        так плохо
+            "Content-Type: charset=UTF-8; application/javascript"
+        так надо
+            "Content-Type: application/javascript; charset=UTF-8"
+
+
+-   -   -   -   [id]
+	headers('utf8 css cache-on until next sunday'); // -
+
+-   -   -   -   [tz]
+	хендлер
+	для работы с заголовками
+
+	в идеале
+		перезапись
+		снятие
+		добавление
+
+-   -   -   -

@@ -1,0 +1,19 @@
+    @mouseenter="paused = true"
+             @mouseleave="paused = false"
+
+
+if (this.running) {
+                        if (this.movingForward) {
+                            this.position -= this.percentPerSecond; // Двигаемся вперед
+                            if (this.position <= -100) { // Достигли конца в одну сторону
+                                this.movingForward = false;
+                                this.running = false;
+                            }
+                        } else {
+                            this.position += 0.5; // Двигаемся назад
+                            if (this.position >= 0) { // Достигли начала
+                                this.movingForward = true;
+                            }
+                        }
+                    }
+                    this.rafId = requestAnimationFrame(updatePosition);

@@ -1,0 +1,9 @@
+-	-	-	-	side panel
+
+в ncApp добавляем класс -min
+	который весит на всём <app> metro-targets/r/app/app.tpl.php:32
+через toggleSide() от side-head.vue emit
+
+храним значение в сессии
+	$Self::$nsSideState / metro_app::$nsSideState
+-	-	-	-

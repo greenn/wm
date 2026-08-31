@@ -1,0 +1,50 @@
+provide: [
+	{ 'target-tpl': {
+		addValidate: {
+			itemsProp: 'validateItems',
+			passes_min: true
+		}
+	} }
+],
+
+
+emits
+	onChange
+
+data
+	coverage - значение охвата для данного таргета
+	busyCoverage - флаг-busy для подсчёта охвата
+
+	ready - готовность компоненты
+
+
+methods
+	onReady
+		если есть initData
+				выставляется в target-constructor.vue.js.inc:101
+					после вызова из targets/target-form.vue.js.inc:193 при mode = 'update'
+			выполняем fetchInitData()
+
+	fetchInitData
+		выполняем функцию initData case-01
+		или fetchData заполянем объектом initData case-base
+			metro-targets/r/target-tpl/provide/target-tpl.js.inc:46
+
+	fetchData
+		заполняет this.cfg данными
+
+	addValidate (конструктор)
+		доблавяем в стек validateItems
+			компоненту для валидации
+				есть особое правило для
+					passes_min
+
+	validate (конструктор)
+		выполняем валидацию validateItems
+
+watch
+	cfg
+		отдаем this.cfg в emit/onChange
+
+	wait
+		если всё загрузилост запускаем onReady

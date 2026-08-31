@@ -1,0 +1,18 @@
+-   -   -   -
+<v-tooltip bottom>
+    <template v-slot:activator="{ on, attrs }">
+        <v-btn v-bind="attrs" v-on="on">Button</v-btn>
+    </template>
+    Текст подсказки
+</v-tooltip>
+
+<section>
+    <div @mouseenter="tooltip = true" @mouseleave="tooltip = false">Наведите на меня</div>
+    <v-tooltip v-model="tooltip" bottom>
+      <template v-slot:activator="{ on }">
+        <!-- Здесь должен быть элемент, но он не будет отображаться, поскольку управление видимостью всплывающей подсказки осуществляется через v-model -->
+        <span v-on="on"></span>
+      </template>
+      Сохранено
+    </v-tooltip>
+  </section>

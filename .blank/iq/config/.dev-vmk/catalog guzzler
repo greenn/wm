@@ -1,0 +1,63 @@
+
+=   =   =   =   man
+
+тарела
+    есть - есть файл
+    бумажная - нет файла
+
+
+приборы - указанный обработчик
+   название-приборов - путь до отсутсвующего обработчика
+
+приступаем к еде
+    начинаеи обработку данных в обработчике
+
+остатки
+    разница в размере файла (строго и нового)
+
+
+-   -   -   -
+http://vmk.loc/api/kmod/guzzler/dbg/sheet?name=tombs-price4&id=53
+http://vmk.loc/api/kmod/guzzler/dbg/sheet?name=tombs-price3&id=53
+
+-   -   -   -
+r/site/catalog/_db/products/parsePricelist.inc
+$dbPricePath = ROOT.'/kot/r/mod/guzzler/sheet/json/tombs-price3.json';
+$dbPrice = jsonFile_get_data($dbPricePath);
+$pricelistData = $dbPrice[$id];
+
+-   -   -   -
+http://vmk.loc/api/kmod/guzzler/dbg/sheet?name=tombs-price3
+http://vmk.loc/api/kmod/guzzler/dbg/sheet?stomach=morgue-list
+
+=   =   =   =   =   =   =   =   =   =
+http://vmk.loc/api/post/kmod/guzzler/eat?mock=1&data=5
+
+
+http://vmk.loc/api/post/kmod/guzzler/eat?&ingredients%5Bplate%5D=tombs-price2&ingredients%5Bdish%5D=json&ingredients%5Bcutlery%5D=tombs-price&seasoning%5Bjson%5D=true&seasoning%5Bjson-filter-comment%5D=true&seasoning%5Bjson-merge-data%5D=true&seasoning%5Bjson-backup-data%5D=false&seasoning%5Bjson-try-fix%5D=true
+    $query = '&ingredients%5Bplate%5D=tombs-price2&ingredients%5Bdish%5D=json&ingredients%5Bcutlery%5D=tombs-price&seasoning%5Bjson%5D=true&seasoning%5Bjson-filter-comment%5D=true&seasoning%5Bjson-merge-data%5D=true&seasoning%5Bjson-backup-data%5D=false&seasoning%5Bjson-try-fix%5D=true';
+    $query = ltrim($query, '&');
+    parse_str($query, $myArray);
+$myArray = [
+    'ingredients' => [
+        'plate' => 'tombs-price2',
+        'dish' => 'json',
+        'cutlery' => 'tombs-price'
+    ],
+    'seasoning' => [
+        'json' => true,
+        'json-filter-comment' => true,
+        'json-merge-data' => true,
+        'json-backup-data' => false,
+        'json-try-fix' => true
+    ]
+];
+    $queryString = http_build_query($myArray);
+
+=   =   =   =   =   =   =   =   =   =
+
+
+http://vmk.loc/api/get/kmod/guzzler/get-select?name=dish
+
+
+http://vmk.loc/api/get/kmod/guzzler/test

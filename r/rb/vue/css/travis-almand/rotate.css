@@ -1,0 +1,4 @@
+.rotate-enter { transform: perspective(500px) rotate3d(0, 1, 0, 90deg); }
+.rotate-enter-active,
+.rotate-leave-active { transition: 0.5s; }
+.rotate-leave-to { transform: perspective(500px) rotate3d(0, 1, 0, -90deg); }

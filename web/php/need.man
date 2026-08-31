@@ -1,0 +1,25 @@
+
+
+need{} - класс подгрузки(инклюдов) php файлоы
+
+$order - порядоквызовов
+$list - список загруженных файлоы
+
+$php - директория для вызова php
+php() - обращение в вызову php
+_php - реализация вызова php
+
+$pro - директория для вызова pro
+pro() - обращение в вызову pro
+_pro - реализация вызова php
+pro_ - кастомайзер вызова php
+
+
+
+-	-	-	-	ak addphp
+function addphp(){
+	return call_user_func_array("need::php", func_get_args());
+}
+-	-	-	-	ak needphp
+	foreah addphp()
+

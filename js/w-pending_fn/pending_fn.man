@@ -1,0 +1,5 @@
+ts
+    var _pendedData = dynamic_content_menu;
+        ...
+    dynamic_content_menu = function(sr, hasIndex){
+    _pendedData.applyWith(dynamic_content_menu); //step: выполняем функцию с данными, занесёнными до оформленияфункции

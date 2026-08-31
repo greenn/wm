@@ -1,0 +1,18 @@
+=	=	=	=	pr
+http://vmu.loc/test/rp4.php
+	rp()
+	r_tpl()
+	uri()
+
+http://vmu.loc/test/rp3.php
+	custom rw
+
+http://vmu.loc/test/rp2.php
+	_rp::name
+	_rp::path
+	_rp::self
+	rp::tpl
+	rp::tempCtx
+
+http://vmu.loc/test/rp1.php
+	_rp::need

@@ -1,0 +1,52 @@
+-	-	-	-	files
+blank.class.inc
+	подготовка данных
+		в базу
+		из базы
+
+blank.vue.js.inc (v2)
+	глобальный обхъект Vuex.Store для данного crud
+	vue api < @provide crud
+	vue routes
+
+blank.css.php
+
+blank-list.vue.js.inc
+blank-list.vue.tpl.inc
+
+blank-form.vue.js.inc
+	@provide crud-form
+		update();
+		create();
+		fetchForm();
+blank-form.vue.tpl.inc
+
+api
+
+	item.get
+	list.get
+	item.delete
+	update.put
+	create.post
+	copy.post
+	aproove.patch
+	reject.patch
+
+blank-item.vue.js.inc
+blank-item.vue.tpl.inc
+
+
+
+-	-	-	-	menu
+	side-menu\api\menu.data.inc
+
+-	-	-	-	подключение компонент страницы
+
+
+metro-targets/r/app/app.tpl.php
+
+	_metro::req_vue(-1, 'targets');
+	<? if (0) { ?><targets v-if="iqs.targets"></targets><? } ?>
+	<targets></targets>
+
+

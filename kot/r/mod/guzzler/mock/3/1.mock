@@ -1,0 +1,54 @@
+{
+	"01005.jpg": {
+		"name": "Юрий",
+		"surname": "Потапчев",
+		"middlename": "Венедиктович",
+		"birth_date": "13.03.1952",
+		"death_date": "24.12.2017",
+		"monument_type": "крест",
+		"monument_style": "деревянный крест",
+		"additional_info": {
+			"inscription": "Потапчев Юрий Венедиктович 13.03.1952 - 24.12.2017",
+			"photograph": "нет"
+		}
+	},
+	"01006.jpg": {
+		"name": "Татьяна",
+		"surname": "Павлова",
+		"middlename": "Борисовна",
+		"birth_date": "02.05.1956",
+		"death_date": "26.12.2017",
+		"monument_type": "плита",
+		"monument_style": "камень",
+		"additional_info": {
+			"inscription": "Павлова Татьяна Борисовна 02.05.1956 - 26.12.2017",
+			"photograph": "есть"
+		}
+	},
+	"01008.jpg": {
+		"name": "Зинаида",
+		"surname": "Михайлова",
+		"middlename": "Ивановна",
+		"birth_date": "02.05.1930",
+		"death_date": "14.12.2017",
+		"monument_type": "крест",
+		"monument_style": "деревянный крест",
+		"additional_info": {
+			"inscription": "Михайлова Зинаида Ивановна 02.05.1930 - 14.12.2017",
+			"photograph": "нет"
+		}
+	},
+	"01009.jpg": {
+		"name": "Неизвестно",
+		"surname": "Неизвестно",
+		"middlename": "Неизвестно",
+		"birth_date": "Неизвестно",
+		"death_date": "Неизвестно",
+		"monument_type": "крест",
+		"monument_style": "деревянный крест",
+		"additional_info": {
+			"inscription": "Надпись на табличке неразборчива",
+			"photograph": "нет"
+		}
+	}
+}

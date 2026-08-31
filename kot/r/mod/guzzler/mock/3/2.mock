@@ -1,0 +1,67 @@
+{
+    "п00001.jpg": {
+        "name": "Анастасия",
+        "surname": "Скрипчан",
+        "middlename": "Михайловна",
+        "birth_date": "20.03.1931",
+        "death_date": "23.06.2019",
+        "monument_type": "крест",
+        "monument_style": "крест",
+        "additional_info": {
+            "epitaph": "Вечная память",
+            "photo": false
+        }
+    },
+    "п00002.jpg": {
+        "name": "Николай",
+        "surname": "Васильев",
+        "middlename": "Николаевич",
+        "birth_date": "07.07.1973",
+        "death_date": "09.06.2019",
+        "monument_type": "крест",
+        "monument_style": "крест",
+        "additional_info": {
+            "epitaph": "Вечная память",
+            "photo": false
+        }
+    },
+    "п00003.jpg": {
+        "name": "Вера",
+        "surname": "Малова",
+        "middlename": "Александровна",
+        "birth_date": "не указана",
+        "death_date": "не указана",
+        "monument_type": "крест",
+        "monument_style": "крест",
+        "additional_info": {
+            "epitaph": "не указана",
+            "photo": true
+        }
+    },
+    "п00004.jpg": {
+        "name": "Виктор",
+        "surname": "Гайворонский",
+        "middlename": "Ярофеевич",
+        "birth_date": "03.08.1955",
+        "death_date": "02.07.2019",
+        "monument_type": "плита",
+        "monument_style": "крест",
+        "additional_info": {
+            "epitaph": "Вечная память",
+            "photo": false
+        }
+    },
+    "п00005.jpg": {
+        "name": "Владимир",
+        "surname": "Максимов",
+        "middlename": "Иванович",
+        "birth_date": "11.08.1961",
+        "death_date": "29.06.2019",
+        "monument_type": "крест",
+        "monument_style": "крест",
+        "additional_info": {
+            "epitaph": "не указана",
+            "photo": false
+        }
+    }
+}

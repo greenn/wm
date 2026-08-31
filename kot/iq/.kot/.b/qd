@@ -1,0 +1,222 @@
+http://kod.nadube/metro-targets/iq/install.php
+http://kod.nadube/metro-targets/iq/install.php?rebuild
+http://kod.nadube/metro-targets/iq/test/db-table-test.php?rebuild
+
+
+http://kod.nadube.ru/metro-targets/iq/install.php
+http://kod.nadube.ru/metro-targets/iq/install.php?rebuild
+
+
+metro-targets/iq/test/named-url.php
+
+passenger - p
+card - c
+sale - sa
+place - pl
+passes - ps
+restore - r
+write - w
+topup - t
+helpdesk - h
+services - se
+message - m
+
+-	-	-	-	rep
+
+$nSF = $Self::nc('SF'); //station-freq
+$nPSF = $Self::nc('P-SF'); //passes--station-freq
+station-freq
+
+-	-	-	-	provide
+
+metro-targets/r/target-tpl/provide/target-tpl.js.inc
+metro-targets/r/ui/provide/field-validate.js.inc
+
+-	-	-	-
+
+
+$update = $post_fields =
+$except_fields = array('uid', 'date');
+mc::item_pickFields('targets-list', $post, $except_fields);
+
+
+-	-	-	-	dbg
+_rp('tpl-passes--station-freq')
+_rp('target-constructor', 'selecterOptions')
+_rp('tpl-passes--station-freq', 'validateItems')
+_rp('ui')
+_r.pick('target-view', 'targets')
+_r.pick('target-constructor', 'list')
+_cc(_rr._list['target-constructor'].reslist);
+_Targets.getters.getItem('10000').forecast
+_Targets.getters.getList
+_Targets.state.list
+
+
+-	-	-	-	info
+
+mc::db_current(),
+	pro::$cfg,
+	pro::cfg_get('db-struct-data')
+
+
+
+-	-	-	-	metro test
+	-	-	icons
+		metro-targets/iq/test/icons.php
+
+-	-	-	-	vue
+	-	-	test api
+		metro-targets/iq/test/api.php
+	-	-	transition
+		r/rb/vue/test/transition/index.php
+		r/rb/vue/test/transition/styles.css.php
+
+    	r/rb/vue/test/transition/eg.php
+
+-	-	-	-	qp
+php/parser/strTabMenuParser.class.php
+
+
+
+-	-	-	-	db
+http://kod.nadube/metro-targets/iq/install.php?rebuild
+https://kod.nadube.ru/metro-targets/iq/install.php?rebuild
+
+-	-	-	-	api
+
+http://kod.nadube/api/post/metro/app/side-toggle
+
+http://kod.nadube/api/metro/targets/tpl-info?dbg=add-target
+
+
+http://kod.nadube/api/metro/ui/select-station
+http://kod.nadube/api/metro/ui/select-time-preset
+
+http://kod.nadube/api/metro/targets/tpl-info
+http://kod.nadube/api/metro/target-tpl/stations
+http://kod.nadube/api/post/metro/targets/create?fields[name]=test-1&emu=true
+http://kod.nadube/api/post/metro/targets/copy?id=10000
+http://kod.nadube/api/post/metro/targets/copy?id=10980
+
+forecast-agregate
+http://kod.nadube/api/post/metro/targets/forecast/aggregate?targets[0][id]=0&targets[0][passes_min]=0&targets[0][passes_min-fix]=false&targets[0][interval]=&targets[0][from]=2023-09-10&targets[0][to]=2023-09-10&targets[0][name]=passes/passes-qy&targets[1][id]=2&targets[1][passes_min]=5&targets[1][passes_min-fix]=true&targets[1][interval]=last-7d&targets[1][from]=2023-09-03&targets[1][to]=2023-09-10&targets[1][name]=passes/passes-qy&targets[1][interval-fix]=true&targets[2][id]=3&targets[2][passes_min]=4&targets[2][passes_min-fix]=false&targets[2][interval]=last-7d&targets[2][station][]=504&targets[2][station-fix]=true&targets[2][to]=2023-09-10&targets[2][from]=2023-09-03&targets[2][name]=passes/station-freq&targets[2][interval-fix]=true
+	http://kod.nadube/api/post/metro/targets/forecast/aggregate?targets[0][id]=2&targets[0][passes_min]=5&targets[0][passes_min-fix]=true&targets[0][interval]=last-7d&targets[0][from]=2023-09-03&targets[0][to]=2023-09-09&targets[0][name]=passes/passes-qy&targets[0][interval-fix]=true&targets[1][id]=3&targets[1][passes_min]=4&targets[1][passes_min-fix]=false&targets[1][interval]=last-7d&targets[1][station][]=504&targets[1][station-fix]=true&targets[1][to]=2023-09-09&targets[1][from]=2023-09-03&targets[1][name]=passes/station-freq&targets[1][interval-fix]=true&targets[2][id]=0&targets[2][passes_min]=0&targets[2][passes_min-fix]=true&targets[2][interval]=&targets[2][from]=2023-09-10&targets[2][to]=2023-09-09&targets[2][name]=passes/passes-qy
+
+forecast
+
+http://kod.nadube/api/post/metro/targets/forecast?id=10000
+http://kod.nadube/api/post/metro/targets/forecast/batch?id-list[]=10000&id-list[]=10020
+http://kod.nadube/api/post/metro/targets/forecast/batch?id-list%5B%5D=10000&id-list%5B%5D=10020
+
+http://kod.nadube/api/patch/metro/targets/aproove?id=10000
+
+http://kod.nadube/api/metro/targets/list
+
+http://kod.nadube/api/metro/targets/item?id=10000
+
+http://kod.nadube/api/post/metro/targets/update?id=10000&fields[title]=updated-title
+
+create
+	http://kod.nadube/api/post/metro/targets/create?fields[uid]=&fields[title]=555&fields[targets][0][passes_min]=10&fields[targets][0][passes_min-fix]=false&fields[targets][0][station]=&fields[targets][0][station-fix]=true&fields[targets][0][from]=2023-08-06T19:40&fields[targets][0][from-fix]=true&fields[targets][0][to]=2023-08-13T19:40&fields[targets][0][to-fix]=true&fields[targets][0][name]=station-freq&fields[targets][1][passes_min]=15&fields[targets][1][passes_min-fix]=false&fields[targets][1][from]=2023-08-06T19:40&fields[targets][1][from-fix]=true&fields[targets][1][to]=2023-08-13T19:40&fields[targets][1][to-fix]=true&fields[targets][1][name]=passes-qy
+
+create-target
+	http://kod.nadube/api/post/metro/targets/target?target[passes_min]=10&target[passes_min-fix]=false&target[station]=&target[station-fix]=true&target[from]=2023-08-06T19:40&target[from-fix]=true&target[to]=2023-08-13T19:40&target[to-fix]=true&target[name]=station-freq
+
+update
+	http://kod.nadube/api/put/metro/targets/update?id=10000&fields[uid]=10000&fields[title]=тест2&fields[date]=14.08.2023+11:35:25&fields[aprooved]=&fields[targets][0][passes_min]=200&fields[targets][0][passes_min-fix]=0&fields[targets][0][station]=&fields[targets][0][station-fix]=&fields[targets][0][from]=2023-07-01T04:35&fields[targets][0][from-fix]=0&fields[targets][0][to]=2023-08-01T01:50&fields[targets][0][to-fix]=0&fields[targets][0][id]=1&fields[targets][0][name]=station-freq&fields[targets][1][passes_min]=55&fields[targets][1][passes_min-fix]=0&fields[targets][1][from]=2023-07-01T04:35&fields[targets][1][from-fix]=0&fields[targets][1][to]=2023-08-01T01:50&fields[targets][1][to-fix]=0&fields[targets][1][id]=2&fields[targets][1][name]=passes-qy&fields[targets][1][station]=&fields[targets][1][station-fix]=&fields[aproovedTitle]=Не+согласован
+
+
+-	-	-	-	db
+http://kod.nadube/metro-targets/iq/install.php
+http://kod.nadube/metro-targets/iq/install.php?rebuild
+http://kod.nadube.ru/metro-targets/iq/install.php
+
+metro-targets/iq/test/db-date.php
+metro-targets/iq/test/db-targets.php
+
+
+metro-targets/iq/test/icons.php
+
+
+
+http://kod.nadube/api/metro/side-menu/list?by=link
+
+<keep-alive>
+	<component :is="viewName"></component>
+</keep-alive>
+
+<?//=metro_i::img('assets/mosmetro_vert_sign.svg')?>
+
+js::wreq('mq.jq')
+
+/r/rb/vue/test/transition/
+
+
+
+
+-	-	-	-	db
+
+http://kod.nadube/metro-targets/iq/install
+
+-	-	-	-	crud (prev)
+php/crud_json.struct
+php/crud_json.php
+
+php/response.struct
+php/response.php
+
+
+
+-	-	-	-	test
+iq/test/php/mysql.php
+metro-targets/iq/test/date.php
+
+
+
+return [
+    { path: '/:page/:tail(.*)*', component: _Page404 },
+]
+
+iq/tool/admin/edit.js.php
+
+
+r/rb/vue/test/router/app.js.php
+
+
+=	=	=	=	=	=	=	=	prev
+=	=	=	=	api
+	http://gettbot.loc/api/about/titul-chart
+	http://gettbot.loc/api/site/about/titul-chart
+
+=	=	=	=	page
+page
+	print site('page', 'pid', 'landing'); // landing/landing.tpl.php
+	print site('page', 'html', 'uc', 'uc1'); // uc/uc1.tpl.php
+
+=	=	=	=	test
+
+iq/install/index.php
+
+test
+	iq/test/css/flex/column-wrap.php
+	iq/test/php/faq/var-name.php
+	iq/test/php/dataPath.php
+
+
+	iq/test/css/animate-css/index.php
+
+css lib csshake
+	css/csshake/1.7.0/docs/index.html
+
+
+-	-	-	-	header/footer /pre-tpl
+
+<div class="<?=$n?> site-p">
+    <div indent="<?=$n?>-top"></div>
+    <div class="site-w">
+        <div fxr class="<?=$n?>-w">
+        </div>
+    </div>
+    <div indent="<?=$n?>-bottom"></div>
+</div>

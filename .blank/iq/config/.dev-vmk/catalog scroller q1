@@ -1,0 +1,50 @@
+у меня получилось
+data
+rafId: null,
+                running: false,
+                position: 0,
+                pixelsPerSecond: 100,
+                pxItem: 300,
+|
+method
+startScrolling() {
+                this.running = true;
+
+                const updatePosition = () => {
+                    if (this.running) {
+                        this.position -= this.percentPerSecond; // Двигаемся вперед
+                        if (this.position <= -100) { // Достигли конца в одну сторону
+                            this.running = false;
+                        }
+                    }
+                    this.rafId = requestAnimationFrame(updatePosition);
+                };
+                updatePosition();
+            },
+
+computed
+percentPerSecond(){
+                var nCount = this.$props.n;
+                var pxTotal = nCount * this.pxItem;
+                return (this.pixelsPerSecond / pxTotal) * 100;
+            },
+
+            scrollStyle() {
+                return {
+                    transform: `translateX(${this.position}%)`,
+                    //transition: `transform ${this.scrollingSpeed}s linear`
+                    transition: 'transform 0s linear'
+                };
+            },
+template
+<div
+             :style="scrollStyle"
+        >
+            <prod-items :items="items" :n="n"></prod-items>
+        </div>
+mounted(){
+            this.startScrolling();
+
+        },
+всё ли правильно?
+почему-то не происходит движения

@@ -1,0 +1,43 @@
+-	-	-	-	last
+kot/r/modal/modal.class.inc
+kot/r/app/provide/crud-modal.js.inc
+kot/r/ui/lay/lays.css.php
+kot/r/ui/lay/lay-section.eg.tpl.inc
+kot/r/ui/lay/lay-section.vue.js.inc
+kot/r/ui/lay/lay-section.vue.tpl.inc
+kot/r/app/app.js.php
+
+-	-	-	-
+
+
+http://vmk.loc/api/get/kot/side-menu/list
+
+
+_kot::req_vue('ui', 'form/field', array(), 'ui-field');
+$Self::req_vue('form/field', array(), 'ui-field');
+
+-	-	-	-	api
+
+http://vmk.loc/api/get/kot/side-menu/list
+
+_r.titulRelRoute = '<?=_kot::namedUrl('clear-rn')?>';
+
+
+
+-	-	-	-	live
+https://admin.granitplace.ru/
+
+https://granitplace.ru/iq/db/install.php
+
+https://granitplace.ru/kot/iq/install.php
+
+
+-	-	-	-	-	-
+-	-	-	-	dbg
+_rp('tpl-passes--station-freq', 'validateItems')
+_rp('ui')
+_r.pick('target-view', 'targets')
+_r.pick('target-constructor', 'list')
+_cc(_rr._list['target-constructor'].reslist);
+_Targets.getters.getItem('10000').forecast
+_Targets.getters.getList()

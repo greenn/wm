@@ -1,0 +1,3 @@
+<div>
+    v-cmpt
+</div>

@@ -1,0 +1,213 @@
+
+rp_shandler{} < rp_shandler_L{}
+
+	:@x
+
+	:@rpName  -//не хранит реальное значение, используется только для возможного указания определлёного rpName
+	rpName:()
+	x:()
+	xSlice:()
+
+	val:() -//значение
+	    -   -   eg
+	        значения в виде массива
+            /*[eg
+                $lims = array(
+                    static::val('content-image', 'wx'),
+                    static::val('content-image', 'hx'),
+                    'data' => static::val('content-image'),
+                );
+            ===
+                $lims = static::vals(array(
+                    array('content-image', 'wx'),
+                    array('content-image', 'hx'),
+                    'data' => 'content-image'
+                ));
+            ]*/
+
+	vals:()
+
+    nc:()
+	cq:() -//кдасс q (ak media-query)
+	ns:() -//получение стека имён (классов)
+	anc:() -//вывода классов через пробел (для html-атрибута class="")
+	snc:() -//класс для css-селектора
+	_snc:() -//класс для css-селектора без ведущей (точки)
+
+
+	nc_:()
+	nj:() -//names for js: functions, vars
+	    //0
+
+	n:() -//names for css/js: classes, id, variables
+	    //0
+
+    path:()
+	    tg
+            static::path($hash, 'ctx')
+            static::path($name, 'css.inc')
+            static::path($name, 'css.php')
+            static::path($name, 'data.inc')
+            static::path($name, 'tpl.php')
+            #ar-1: static::path(array('jquery'), js.php');
+            static::path(array('jquery', 'js'), js.php');  - js.php проигнорируется
+            static::path($name, array('scene', 'php')) - где scene == 'scene' => array('subDir' => 'r/scene') === r/scene/{$name}.php
+
+
+
+	inc:()
+	    [dd]
+
+
+	:@file_cache
+	file_save:()
+	file_get:()
+
+	uri:()
+	ctx_save:()
+	ctx_get:()
+	uriCtx:()
+
+	css_uri:()
+	:@css_link
+	css_link:()
+	css_inc:()
+
+	:@css_inline
+	    [dd]
+            ::css_inline('main.toggled', null, false, 'css.inc');
+            ::css_inline(array('main.toggled', 'css.inc'));
+	css_inline:()
+
+
+	:@css_import
+	css_import:()
+
+	js_uri:()
+	:@js_link
+	js_link:()
+	:@js_inline
+	js_inline:()
+
+
+	data:()
+	    //ak data_inc
+	dataProp:()
+	dataSlice:()
+	    //0
+
+	data_path:()
+	data_save:()
+	data_get:()
+
+	=== комплекс доступа к файлу list-данных по имени $pd_%data
+	& :pd_%data имя данных, из relDataPath
+	& :pd_%data_def() - данные по умолчанию (при отсутствии данных)
+	pd_data:() - получение данных
+	pd_data_save:() - сохранение данных
+	pd_data_def:() - алтернативное значение по умолчанию
+	pd_data_get:() - получение среза данных
+
+
+
+
+
+	tpl:()
+
+
+	tplCtx:() -//helper для разводки пришедших аргуметов
+        [oo _\pro my\WCMS\dm\php\rp_shandler\tplCtx]
+        eg
+            extract($Self::tplCtx(array(
+                'content' => false,
+                'nc' => false,
+                'tag' => 'span',
+                'q' => false,
+                'text' => ''
+            ))); $content; $nc; $tag; $q; $text;
+
+
+
+	tplx:() -//расширение контекста дополнительными данными
+        //с выбором свойства для среза дополнительного котнекста
+
+	tplxx:() -//сладкий вариат для среза свойства [def(transit)] от доп.контекста для получения транизтного контекста
+
+	tplEnv:() -// \mb-section
+	    //0
+	    |tplInline|tplEnv|
+
+
+	:@lo = array();
+	log:()
+	log_:()
+	log_x:()
+
+	get_log:()
+	    //$cond - указание выбора из стека $log[$name]
+        //  true - последний
+
+
+	url_response:()
+	    //api_response|json_response|
+
+
+
+
+	ns_o:() - //names-of-order-classes
+	    eg:
+            $Self::ns_o($index, 3);
+            $Self::ns_o($index, 3, '-o3n');
+            $Self::ns_o(array($index, null, $lastKey), '-od', '-o2', '-o3');
+            $Self::ns_o(array($key, $firstKey, $lastKey, $index), 4)
+            $Self::ns_o(array($key, null, null, $index), '-o4n')
+
+	nc_o:()
+
+
+rp_shandler_L{}
+
+	get:() -//получение результирующх данных от ресурсов
+	    //[rd!]
+
+
+-   -   -   -   eg conf
+
+x('rp_shandler_eg', array(
+	'js' => array(
+		'dir' => ROOT.'/js',
+	),
+	'css' => array(
+		'dir' => ROOT.'/css',
+		'uri-ctx' => true
+	),
+	'tpl' => array(
+		'dir' => ROOT.'/tpl',
+	),
+	'data' => array(
+		'dir' => ROOT.'/data',
+	),
+	'ctx' => array(
+		'dir' => ROOT.'/data/ctx',
+	),
+));
+
+x('rp_shandler_def', array(
+	'baseDir' => ROOT,
+	'js' => array(
+		'dir' => ROOT.'/js',
+	),
+	'css' => array(
+		'dir' => ROOT.'/css',
+		'uri-ctx' => true
+	),
+	'tpl' => array(
+		'dir' => ROOT.'/tpl',
+	),
+	'data' => array(
+		'dir' => ROOT.'/data',
+	),
+	'ctx' => array(
+		'dir' => ROOT.'/data/ctx',
+	),
+));

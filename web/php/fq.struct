@@ -1,0 +1,38 @@
+// сахарок
+-   -   -   -
+
+is_mixed()
+is_stringable()
+    //is_true()
+is_true_or_numeric()
+is_null_or_false()
+
+nArr()
+nObj()
+
+utf_str()
+
+has_items()
+prop()
+    //[if deep_prop()]
+prop_hit //первое попадание из стека аргументов
+prop_first()
+prop_filter() //[tm]
+
+hit_()  //функция проверки стека на первое успещное выполнения правила
+    //[eg web/test/web/php/fq/hit.php]
+_hit()  //проверка аргументов на первое успешное выполнение правила
+    //[eg web/test/web/php/fq/hit.php]
+hit()  //первый not-empty argument
+    //[eg web/test/web/php/fq/hit.php]
+
+sArr()
+sArg()
+csArg()
+
+
+oe{}
+oee{}
+ohe{}
+
+-   -   -   -

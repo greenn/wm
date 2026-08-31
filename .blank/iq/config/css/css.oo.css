@@ -1,0 +1,97 @@
+/* 	#4.0.19
+	Color-view-test
+	oo iq/config/dev/pro.colors
+
+	https://yandex.ru/yandsearch?text=цвет яндекса&lr=2
+	https://coolors.co/6e9aba
+
+a - оттенок (первый)
+
+с - контраст
+
+d - Темнее (Darker)
+
+b ярче / яркий (bright)
+i интенсивный (intense)
+s - Насыщенный (Saturated)
+
+l - Светлее (Lighter)
+m приглушённый (muted)
+p - тусклее
+pd разбавленный / тусклый (diluted, dim)
+
+*/
+{
+	color: #ecebed; /*
+	 	popup-cover
+	 */
+
+	color: #001700; /* text-color */
+
+	color: #999999; /* tc-content */
+
+	color: #4e6b88; /* c1d */
+	color: #67829E; /* с1 / slate-grey*/
+	color: #6b98b9; /* c1a / Air superiority blue*/
+
+	color: #8199ab; /* c1p */
+	color: #99abbe; color: #b2bfce; /*prod-size-sep-line*/
+	color: #eceef1; /*
+		prod-item-content-bg
+	*/
+	color: #adc3d9; /* c1pd
+		prod-site-title-underline
+		prod-item-section-sep-line
+	*/
+	color: #cad2df; /* c1pl
+		popup-border
+	*/
+
+
+	color: #AF4F72; /* с2 / china-rose
+
+	*/
+	color: #4b3756; /* с3 / english-violet
+
+	*/
+
+
+	color: #a37087;
+	color: #a37187; /* c2a / Mountbatten pink
+
+	*/
+	color: #a06c83; /* c2a-dark /
+
+	*/
+
+	color: #f3d3ec; /* c2pl / mimi-pink
+
+	*/
+
+
+
+	color: #000000; /* black */
+	color: #ffffff; /* white */
+	color: #67829E; /* slate-grey */
+	color: #AF4F72; /* china-rose */
+	color: #5B594A; /* ebony */
+	color: #706A6A; /* dim-gray */
+	color: #001700; /* dark-green */
+	color: #383d50; /* charcoal */
+	color: #bec1c8; /* french-gra */
+	color: #4b3756; /* english-violet */
+	color: #f3d3ec; /* mimi-pink */
+
+
+}
+
+/*
+	//Color-view-test
+
+	https://yandex.ru/yandsearch?lr=2&ext=%23183A4D
+	https://coolors.co/FDFDFE
+
+	https://yandex.ru/yandsearch?text=цвет яндекса&lr=2
+	https://coolors.co/5A616F-606674
+
+*/

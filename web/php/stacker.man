@@ -1,0 +1,108 @@
+Накопитель
+	единый глобальный объект сбора указаний
+
+
+stacker{}
+
+	//функциональный переменные, обязательны к повтороному объявлению при наследовании
+		usage-eg
+			static $hash = array();
+			static $order = array();
+			static $_stack = null;
+
+	@hash - данные / пары [хеш:данные]
+		-//расшифровка хашей
+	@order - массив весов для хешей
+		-//кофигурация порядка
+	@_stack -//результатный список значений [генерируемое, квази-приватное]
+
+	//-
+
+	@build_conf() - составление конфига для сохранения
+		по-умолчанию == func_get_args();
+
+	@hash() - создание уникального хеша
+
+	@req() - указание на использование данных
+	@reqArg()
+	@req_index() - указание на использование данных с определённым весом
+			//req_index|req_index|req_rule|
+
+	@push() - добавление данных в стрек
+
+	@reset_stack() - обнуление сохранённых данных
+
+	@get_stack() - получение уникальных данных отсортированных по весу
+
+	@each_with() -//выполнение перебора уникальных элементов стека с указанным колбеком
+	@each_callback() -//вызов колбека в each_with
+		mb @each_callback()*
+
+	@each_callback_args()
+
+-	-	-	-	для создание другого объекта используй
+		class new_stacker extends stacker { static $stack = array(); }
+
+
+
+-	-	-	-	eg extend
+	//пред-обработка данных / формирование аргументов для вызова
+
+
+		static function each_callback_args(&$res, $conf, $hash){
+			$args = false;
+			$item = static::call('build_item', $conf);
+			if ($item) {
+				//$args = array_merge(array(&$res, $hash, $item), $conf);
+				$args = array(&$res, $item, $conf, $hash);
+			}
+			return $args;
+		}
+		//
+		static function build_item(){ //|build_obj|build_item|
+			//static $cache = array();
+			return false;
+		}
+
+
+
+
+-	-	-	-	Ld / v2
+	//0|L|d
+stacker_calls{} < stacker{}
+
+	/*
+
+
+	*/
+
+	//@listing
+
+	selfCall(){}
+
+	callArgs((){}
+		//вызов своего статического метода с параметрами: ::($ctx, $arg1 = null, $argN = null)
+		//[ph] нету смысла в этом \
+
+	//@callArgsAppend() - 0
+
+	//возможность указания внешнего роутера для вызовов
+	@callRouter = array();
+	@customCall()
+
+	//получение результата по имени метода и заявленным данным
+	@call()
+
+	-	-
+		 в ::req()
+			if (is_array($arg1)) { //0 - [mb] через опцию
+				return static::reqArg($args);
+			}
+
+		::post_req()
+			//listing ~ 0
+			if (!isset(static::$listing[$rName])) static::$listing[$rName] = array();
+			if (!isset(static::$listing[$rName][$tplName])) static::$listing[$rName][$tplName] = array();
+			if (!isset(static::$listing[$rName][$tplName][$hash])) static::$listing[$rName][$tplName][$hash] = 0;
+			static::$listing[$rName][$tplName][$hash]++;
+}

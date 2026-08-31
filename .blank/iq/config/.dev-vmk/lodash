@@ -1,0 +1,23 @@
+debounce
+
+// Создаем debounced версию _log функции
+const debouncedLog = _.debounce((...args) => {
+  _log(...args);
+}, 100);
+
+// Внутри MQAutoResize или другой часто вызываемой функции
+function MQAutoResize() {
+  // Здесь ваш код...
+
+  // Вызываем debouncedLog с параметрами
+  debouncedLog('mqResize', { hasScale, calcHeight, itemH, limWidth });
+}
+
+-   -   -
+
+const debouncedFunction = _.debounce(yourFunction, 100, { 'leading': true, 'trailing': false });
+
+    leading: true
+            означает, что yourFunction будет вызвана сразу при первом вызове,
+    trailing: false
+        предотвращает дополнительный вызов в конце периода ожидания.

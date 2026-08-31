@@ -1,0 +1,26 @@
+
+d($uid, $success, mc::last_sql(), mc::last_sql(1), mc::$mysql->sql_log);
+
+
+mc::$mysql->sql_log
+    весь стек вызовов
+mc::last_sql(1)
+    предпоследний
+mc::last_sql()
+    последний
+
+
+
+
+$agent = site_user::db('browser/getAgent', array('key' => 2)),
+site_user::db('browser/hasAgent', array('agent' => $agent)),
+site_user::db('initUser')
+
+
+
+-   -   -   -   online
+https://granitplace.ru/iq/db/install.php
+
+
+-   -   -   -   local
+http://127.0.0.1/openserver/phpmyadmin/db_structure.php?db=web-vmk&table=&server=1&target=&token=935b48159c287332614dd7a36cd4b247#PMAURL-0:db_structure.php?db=web-vmk&table=&server=1&target=&token=935b48159c287332614dd7a36cd4b247

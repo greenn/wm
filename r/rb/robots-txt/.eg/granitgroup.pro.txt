@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /wp-admin/
+Disallow: /politic/
+Allow: /wp-admin/admin-ajax.php
+
+
+Host: granitgroup.pro
+Sitemap: https://granitgroup.pro/sitemap_index.xml

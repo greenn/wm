@@ -1,0 +1,7 @@
+
+-   -   -   -
+		получение ctx из url  - r_url_ctx | rp_shandler::uriCtx()
+			конвертация последовательных gi_параметров как true-опции
+				visible&opened=0
+				[visible = true, opened = false]
+-   -   -   -

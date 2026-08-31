@@ -1,0 +1,42 @@
+provide: [
+	'ui/field/validate',
+]
+
+props:
+	relValid - установить связанное зачение валиден/не-валиден
+data
+
+	valid: null,
+	on_validate //01 ak validateOnChange
+	validateOnChange: false,
+	stopValidateOnSuccess: false,
+
+	warnInput: false,
+	warnTooltip: false,
+
+	msgWarnDef: 'Необходимо заполнить это поле',
+	msgWarnCustom: 'Необходимо заполнить это поле',
+
+methods
+
+	isValid - дефолтный метод, проверки валидации
+
+	validate - выполнить проверку значения (для валидации)
+
+
+	setValid
+		выставить значение Валидации, и отреагировать
+
+	showWarn
+		подсветить поле
+		показать тултип
+
+watch:
+	value
+		при флаге validateOnChange автоматически валидируемся
+
+	relValid
+		если связанное поле изменилосо статус, меняем и здесь
+
+computed
+	msgTooltip

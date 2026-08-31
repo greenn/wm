@@ -1,0 +1,5 @@
+#oo api/.htaccess
+RewriteEngine on
+#RewriteCond %{REQUEST_URI} !^/ripr/r
+#RewriteCond %{REQUEST_URI} !^/ripr/i
+RewriteRule . index.php

@@ -1,0 +1,19 @@
+pic
+http://vmk.loc/test/css-ef/e1.php
+http://vmk.loc/test/css-ef/e2.php
+
+hover
+http://vmk.loc/test/css-ef/e4.php
+
+billboard
+http://vmk.loc/test/css-ef/e3/
+    http://vmk.loc/test/css-ef/gk1.php
+        http://vmk.loc/test/css-ef/gk1c2.php
+            http://vmk.loc/test/css-ef/gk1c.php
+                makeBannerAnimationWithDelayXV2(1.5, 3, 4)
+
+timer
+    test/css-ef/gtj3b.php
+
+sitemap.xml
+robots.txt

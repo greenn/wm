@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>VUE TT1</title>
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="MobileOptimized" content="width" /><meta name="HandheldFriendly" content="true" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="/r/rb/lay/flex.css.php" />
+	<link type="text/css" rel="stylesheet" href="/r/rb/css/aq.css.php" />
+	<link type="text/css" rel="stylesheet" href="/r/rb/page/css/base.css.php?qv=T822b09a0" />
+	<link type="text/css" rel="stylesheet" href="/r/rb/vue/transitions.css.php?qv=T9fbe0afe" />
+	<script type="text/javascript" src="/js/lodash/4.17.21/lodash.min.js?qv=Ta7660a68"></script>
+	<script type="text/javascript" src="/js/jquery/1.12.4/jquery.min.js?qv=Ta3ca0a7b"></script>
+	<script type="text/javascript" src="/js/knockout/3.5.1/knockout-latest.debug.js?qv=T4a120f65"></script>
+	<script type="text/javascript" src="/js/w-pending_fn/pending_fn.js?qv=Taaf10b4a"></script>
+	<script type="text/javascript" src="/js/axios/0.24.0/axios.js?qv=T66dd080f"></script>
+	<script type="text/javascript" src="/js/emittery/0.6.0/index.standalone.js?qv=Tff8c0d79"></script>
+	<script>var emittery = new Emittery();</script>
+	<script type="text/javascript" src="/js/w-storage/5.0.0/storage.js?qv=T9b430a24"></script>
+	<script type="text/javascript" src="/js/vue/3.2.20/vue.global.js?qv=T7ca00907"></script>
+	<script type="text/javascript" src="/js/vue-router/4.0.12/vue-router.global.js?qv=T339c0ea3"></script>
+	<script type="text/javascript" src="/r/rb/vue/env.js.php?v3&qv=T5f150805"></script>
+</head>
+<body>
+
+<script>
+    var _log = Log.for('DBG');
+    VueRoot.root.init({
+        mount: '#app',
+        decl: function(_log){
+            return {
+                data() {
+                    return {
+                        inputValue: 'Initial Value'
+                    };
+                },
+            }
+        },
+    });
+</script>
+
+<div id="app">
+	<ui-custom v-model:field-value="inputValue"></ui-custom>
+	<p>Field Value: {{ inputValue }}</p>
+</div>
+
+<script type="text/x-template" id="ui-field">
+	<div fxr>
+		ui-field:
+		<input :value="value" @input="$emit('update:value', $event.target.value)" />
+	</div>
+</script><script type="text/javascript">
+    _vue('ui-field', function(_log, _cmd){
+        return {
+            props: ['value'],
+            emits: ['update:value'],
+        }
+    })
+</script>
+
+<script type="text/x-template" id="ui-custom">
+	<div fxr>
+		ui-custom:
+		<ui-field :value="fieldValue" @input="$emit('update:fieldValue', $event.target.value)"></ui-field>
+	</div>
+</script><script type="text/javascript">
+    _vue('ui-custom', function(_log, _cmd){
+        return {
+            props: ['fieldValue'],
+            emits: ['update:fieldValue'],
+        }
+    })
+</script>
+</body>
+</html>

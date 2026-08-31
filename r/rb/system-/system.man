@@ -1,0 +1,69 @@
+
+-	-	-	-	api
+
+	GET log/last-pid
+	GET log/sid
+	GET log/data
+	GET log/uid
+
+
+-	-	-	-	q-fn
+_log() - //логирование данных для разработки
+_msg() - //системные сообщения (aka warn), которые можно выкидывать на страницу для информирования
+_error() - //системные ошибки, которые можно выкидывать на страницу для информирования
+_dd() - //system debug Data
+
+-	-	-	-	eg
+
+openlog("имя вашей программы", LOG_PID | LOG_PERROR, LOG_LOCAL0);
+syslog(LOG_WARNING,"Программа запущена");
+...
+// тут программа
+...
+syslog(LOG_WARNING, "Программа завершила выполнение");
+closelog();
+
+-	-
+	if (prop($data, 'type') === 'log' && has_prop($data, 'msg')) {
+		syslog(LOG_DEBUG, $data['msg']);
+	}
+
+-	-	-	-	man
+
+"SYSLOG_NS
+	= syslog
+
+
+
+rp_system{}
+	< site_rp{} < rp_shandler
+		:x = 'rp_system';
+
+	:log
+	:rid - //id текущешго процесса / запуска / запроса
+	:uid
+
+	:dbg_sid
+
+
+//= LOG
+	:reset()
+		- очищает лог-данных
+		- сбрасывает лог-данных
+		- выставляет значеное по умолчанию
+		- выставляет пустое значение
+
+
+	:_log()
+
+	:log()
+
+	:dbglogPath()
+
+	:dbgsave()*
+
+	:logData()
+	:unwrapLogData()
+	:getSessionLog()
+	:getSessionLogBySid()
+	:sortByLastDateDesc_cb()

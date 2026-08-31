@@ -1,0 +1,35 @@
+http://vmk3.loc/api/kmod/guzzler/dbg/sheet?name=tombs-price3
+http://vmk3.loc/api/kmod/guzzler/dbg/sheet?stomach=morgue-list
+
+
+http://vmk3.loc/api/post/kmod/guzzler/eat?&ingredients%5Bplate%5D=tombs-price2&ingredients%5Bdish%5D=json&ingredients%5Bcutlery%5D=tombs-price&seasoning%5Bjson%5D=true&seasoning%5Bjson-filter-comment%5D=true&seasoning%5Bjson-merge-data%5D=true&seasoning%5Bjson-backup-data%5D=false&seasoning%5Bjson-try-fix%5D=true
+
+
+http://vmk3.loc/api/get/kmod/guzzler/get-select?name=dish
+
+
+http://vmk3.loc/api/get/kmod/guzzler/test
+
+
+=   =   =   =   =
+http://vmk2.loc/api/get/kot/app-user/snippet-info
+
+
+=   =   =   =   kmod
+http://vmk.loc/api/get/kmod/site-menu/list
+http://vmk.loc/api/get/kmod/blank/list
+
+=   =   =   =   kot
+http://vmk.loc/api/get/kot/app-user/snippet-info
+
+http://vmk.loc/api/get/kot/side-menu/v0/list
+http://vmk.loc/api/get/kot/side-menu/v0/list-by?by=name
+
+
+=   =   =   =   site
+http://vmk.loc/api/get/site/top-menu/data
+
+-   -   -   -   eg
+
+ApiKot
+ApiKMod

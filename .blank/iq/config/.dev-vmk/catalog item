@@ -1,0 +1,64 @@
+_rc('app', 'prod-listing[1]');
+
+
+_r('app', 'prodTooltips');
+
+_r('app', 'curProdId');
+_r('app', 'curProdProp', 'sizes');
+
+
+-   -   -   -
+
+
+
+
+
+
+
+
+
+
+
+
+-   -   -   -   j
+    watch: {
+            list: {
+                handler() {
+                    // Обновление computed при изменении list
+                    this.prodData();
+                },
+                deep: true, // Отслеживание изменений вложенных объектов
+            },
+        },
+
+
+
+
+_log('getProd.prodId', { prodIdn, prodId0, prodId1, prodId2 }, { prodData })
+
+//this._log('getProd0', { prodIdn, prodData: _cc(prodData), prodList: _cc(this.prodList) })
+
+
+
+=   =   =   =   b
+
+
+    <pre mr10>getProdInfo: {{ getProdInfo(true, 'like') }}</pre>
+    <pre mr10>curProdInfoProp: {{ curProdInfoProp('like') }}</pre>
+    <pre mr10>prodInfoProp: {{ prodInfoProp(true, 'like') }}</pre>
+
+
+curProdInfo() {
+    var idn = this.curProdIdn;
+    return this.prodInfo[idn];
+},
+curProdInfoProp() {
+    var data = _.defaults(this.curProdInfo, {
+        like: false,
+        price: false
+    });
+
+    return function(param) {
+        return data && data[param];
+    }
+}

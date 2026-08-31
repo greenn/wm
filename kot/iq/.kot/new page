@@ -1,0 +1,11 @@
+guzzler
+
+    copy
+        kot/r/mod/blank/blank.vue.js.inc
+        kot/r/mod/guzzler/api/list.get.inc
+        kot/r/mod/guzzler/main.vue.js.inc
+        kot/r/mod/guzzler/main.vue.tpl.inc
+
+    update
+        kot/r/app/side-menu/api/v0/list.data.php
+        kot/r/app/app/app.js.php

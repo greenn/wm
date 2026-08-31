@@ -1,0 +1,90 @@
+menu
+	name
+
+
+-	-	-	-	page validate
+	target-form/validate | metro-targets/r/targets/target-form.vue.js.inc:104
+		title  this.$refs.title.validate(...)
+		constructor  this.$refs.constructor.validate(...)
+			each | this.list | target.ref.validate
+				station-freq-tpl/validate {target-tpl} metro-targets/r/target-tpl/provide/target-tpl.js.inc:51
+					each | validateItems | {field.validate} metro-targets/r/ui/provide/field-validate.js.inc:22
+							добавляем в validateItems элементы с addValidate
+								name
+								ref
+								?isValid
+						passes_min
+							ui-field/validate {ui/field/validate}
+						interval
+							select-time-preset/validate
+								select.validate {ui/field/validate}
+						station
+							select-station/validate
+
+-	-	-	-	target-form
+
+fetchForm
+	заполняет fields
+	и вызываем initData для target-constructor
+		который для каждого элемента в списке таргетов
+			делает ( внутри target-constructor)
+				add_target
+					с настройкой fetchData для каждого target-tpl
+				и ожидает этого выполнения
+				после которого фиксирует состояние данных (updateSavedValue)
+
+
+hasChanges
+	кнопка сохранить
+
+
+-	-	-	-	target-constructor
+	при изменении данных в таргете (контроллере таргета)
+	срабатывает вызов onTargetUpdate
+		обновляем элемент в list
+	срабатывает watch в list
+		вызываем метод наверх this.$emit('onChange')
+
+list
+	список
+
+
+:fetchData
+	проставленние данных внутрь темплейта
+
+[prev]
+	:assignData
+		привящка данных таргета (наверх) в конструктор
+
+
+-	-	-	-	target-item
+	получение данных
+		fetchItem
+			_Targets.dispatch('itemGet')
+					 _Targets.dispatch('itemLoad')
+					 	api/get 'targets/item'
+					 		db 'targets-list'
+					 			api/get 'targets/target'
+					 		metro_targets::prepare_item_data
+					 			api 'targets/tpl-info'
+
+				item.targets = _r('targets', 'prepareItemTargets', item.targets);
+
+-	-	-	-	target-form
+
+
+-	-	-	-
+prepareItemTargets
+	транфсормируем даннын из базы, для использования в target-constructor
+		которые там вставяться через add_handler
+					 вставляем контроллер таргета
+						подгружается tpl
+							и у него на свой mount срабатывает
+									submit (для create)
+									on_mount (для edit)
+							добавление в темплейте
+								self.add_target(trgItem, this.cfg);
+
+			после меняется reslist
+			дальше активирует @onChange
+			и меняется уже првяззаный fields.targets

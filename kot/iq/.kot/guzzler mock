@@ -1,0 +1,25 @@
+
+
+-   -   -   -   zo
+
+http://zo.loc/api/post/kmod/guzzler/eat?mock=3&data=1
+
+-   -   -   -
+http://vmk3.loc/api/post/kmod/guzzler/eat?mock=2&data=1
+
+    базовое хранилище
+        kot/r/mod/guzzler/stomach/json/catalog-odezhda.json
+
+    постоянное храненние (опция: json-save)
+        kot/r/mod/guzzler/sheet/json/catalog-odezhda.json
+
+    бекап данные (опция: json-backup-data)
+        kot/r/mod/guzzler/sheet/json-backup/catalog-odezhda.json
+        kot/r/mod/guzzler/sheet/json-backup/catalog-odezhda.240429-121542.json
+
+-   -   -   -   -   -
+oo
+    C:\S17\OpenServer\domains\vmk.loc\iq\config\.dev-vmk\catalog guzzler
+    C:\S17\OpenServer\domains\vmk.loc\iq\config\.dev-vmk\catalog data
+
+http://vmk.loc/api/post/kmod/guzzler/eat?mock=1&data=5

@@ -1,0 +1,35 @@
+-	-	-	-	man
+
+заготовленные
+темплейты
+для быстрого использования
+ntpl через qtpl
+
+ntpl
+	qtpl/ntpl
+
+
+-	-	-	-	naming
+k1|01 - keys-as-button-values-as-tooltip
+
+-	-	-	-	02
+//ak prepareArray
+ntpl()
+$tpl = qtpl::prepare(':b/list/01', array('list' => $js));
+print $tpl['sources'];
+print $tpl['html'];
+
+
+-	-	-	-	01
+
+_ntpl($path, $ctx, false - без sources);
+_ntpl_sources()
+_ntpl_sources('js')
+_ntpl_sources('css')
+
+print qtpl('utils/list/01/', array(
+	'list' => $js,
+	'key' => '',
+	'value' => '',
+), false);
+print qtpl::$sources;

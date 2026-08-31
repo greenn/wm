@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Создание URL</title>
+</head>
+<body>
+
+<!-- Базовый URL -->
+Base URL: <input type="text" id="baseURL" value="http://kod.nadube/api/post/metro/targets/create?"><br>
+
+<!-- Поля для UID и Title -->
+fields[uid]: <input type="text" id="uid"><br>
+fields[title]: <input type="text" id="title"><br>
+
+<!-- Поля для targets -->
+<div id="targetsContainer">
+</div>
+<button onclick="addTarget()">Добавить target</button><br>
+
+<!-- Кнопка для генерации URL -->
+<button onclick="generateURL()">Сгенерировать URL</button>
+<br>
+<!-- Место для отображения сгенерированного URL -->
+<textarea id="generatedURL" rows="5" cols="100"></textarea>
+
+<script>
+    let targetCount = 0;
+
+    function generateURL() {
+        let baseURL = document.getElementById('baseURL').value;
+        let uid = document.getElementById('uid').value;
+        let title = document.getElementById('title').value;
+        
+        let url = baseURL + "fields[uid]=" + uid + "&fields[title]=" + title;
+
+        // Добавляем target поля
+        let targets = document.getElementsByClassName('targetBlock');
+        for (let i = 0; i < targets.length; i++) {
+            let inputs = targets[i].getElementsByTagName('input');
+            for (let j = 0; j < inputs.length; j++) {
+                url += `&fields[targets][${i}][${inputs[j].dataset.fieldName}]=${inputs[j].value}`;
+            }
+        }
+
+        // Отображаем URL
+        document.getElementById('generatedURL').value = url;
+    }
+
+    function addTarget() {
+        let newTarget = document.createElement('div');
+        newTarget.className = 'targetBlock';
+        newTarget.innerHTML = `
+            <button onclick="removeTarget(this)">Удалить target</button> 
+            <button onclick="addCustomField(this)">Добавить поле</button><br>
+        `;
+        document.getElementById('targetsContainer').appendChild(newTarget);
+        targetCount++;
+    }
+
+    function addCustomField(button) {
+        let targetBlock = button.parentElement;
+        let fieldName = prompt("Введите имя поля:");
+        let newField = document.createElement('div');
+        newField.innerHTML = `
+            fields[targets][${targetCount}][${fieldName}]: <input data-field-name="${fieldName}" type="text"><br>
+        `;
+        targetBlock.appendChild(newField);
+    }
+
+    function removeTarget(button) {
+        let targetBlock = button.parentElement;
+        document.getElementById('targetsContainer').removeChild(targetBlock);
+    }
+</script>
+
+</body>
+</html>

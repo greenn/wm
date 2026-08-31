@@ -1,0 +1,33 @@
+-   -   -   -   получить информацию фильтра по имени
+http://vmk.loc/api/get/site/catalog/filter-info?name=size
+
+
+=   =   =   =   генерациия данных для filter
+http://vmk.loc/api/get/site/catalog/gen-sizes-filter
+http://vmk.loc/api/get/site/catalog/gen-prices-filter
+
+-   -   -   -   получить текущие данные списка фильтра
+getFilterList()
+        r/site/catalog/catalog.class.inc:33
+
+-   -   -   -   список фильтров
+getFilterList()
+        r/site/catalog/catalog.class.inc:33
+
+-   -   -   -   admin / установить filter значение
+    kot/r/mod/catalog/api/item-filter.post.inc
+
+-   -   -   -   admin / получить список опций
+    kot/r/mod/catalog/api/item-filters.get.inc
+
+    http://vmk.loc/api/kmod/catalog/item-filters?id=2
+
+-   -   -   -   получить данные фильтра
+r/site/catalog/_db/products/getFilter.inc
+
+-   -   -   -   отфильтровать массив по фильтру
+r/site/catalog/_db/products/filterList.inc
+
+-   -   -   -   получить данные фильтра для объекта
+r/site/catalog/_db/products/getItemFilters.inc
+

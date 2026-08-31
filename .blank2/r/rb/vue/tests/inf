@@ -1,0 +1,209 @@
+=	=	=	=	VUE		=	=	=	=
+
+
+http://vmu.loc/rb/vue/tests/eg46
+	component template
+
+http://vmu.loc/rb/vue/tests/eg45
+	v-model для component
+
+~ http://vmu.loc/rb/vue/tests/eg44b
+
+http://vmu.loc/rb/vue/tests/eg44
+	динамические компонент
+
+
+http://vmu.loc/rb/vue/tests/eg43/2
+	ug vue-storage / vuejsStorage
+- http://vmu.loc/rb/vue/tests/eg43/my
+
+http://vmu.loc/rb/vue/tests/eg43
+	vue-storage
+	vuex
+
+http://vmu.loc/rb/vue/tests/eg42
+	v-for
+
+http://vmu.loc/rb/vue/tests/eg41
+	vue-2
+	animaton - Привнесение дизайна в жизнь
+
+http://vmu.loc/rb/vue/tests/eg40
+	animation - Организация переходов в компонентах
+
+
+http://vmu.loc/rb/vue/tests/eg39
+	animation - Динамические переходы между состояниями
+	svg
+
+http://vmu.loc/rb/vue/tests/eg38
+	animation - counter
+
+http://vmu.loc/rb/vue/tests/eg37
+	animation - Динамические переходы
+		velocity
+
+http://vmu.loc/rb/vue/tests/eg36
+	animation - staggered list
+		js-es6-babel
+
+http://vmu.loc/rb/vue/tests/eg35
+	animation - transition shuffle cmd
+
+http://vmu.loc/rb/vue/tests/eg34
+	animation - transition shuffle
+
+http://vmu.loc/rb/vue/tests/eg33
+	animation - transition list
+
+http://vmu.loc/rb/vue/tests/eg32
+	axios
+
+http://vmu.loc/rb/vue/tests/eg31
+	EG Отображение в виде дерева
+
+http://vmu.loc/rb/vue/tests/eg30
+	EG График на SVG
+
+http://vmu.loc/rb/vue/tests/eg29
+	EG Коммиты на GitHub
+
+http://vmu.loc/rb/vue/tests/eg28
+	EG Пример эластичного заголовка
+
+
+http://vmu.loc/rb/vue/tests/eg27
+	EG Компонент таблицы
+		table
+
+http://vmu.loc/rb/vue/tests/eg26
+	EG Пример компонента-обёртки
+		slot
+		jQuery
+
+http://vmu.loc/rb/vue/tests/eg25
+	EG Компонент модального окна
+
+http://vmu.loc/rb/vue/tests/eg24
+	EG TODO MVC
+
+~ http://vmu.loc/rb/vue/tests/eg23/1
+	[vue2]
+	eg src
+~ http://vmu.loc/rb/vue/tests/eg23
+	[vue2]
+	\v3-5
+	eg login-form
+		emits
+
+- http://vmu.loc/rb/vue/tests/eg22
+	\v3-4
+	expose
+
+http://vmu.loc/rb/vue/tests/eg21
+	\v3-3 / dz-1
+	button
+	component
+		outside
+
+http://vmu.loc/rb/vue/tests/eg20
+	\v3-2
+	select
+
+http://vmu.loc/rb/vue/tests/eg19
+	Валидация входных параметров
+	props - cmpt/props
+	validator
+
+http://vmu.loc/rb/vue/tests/eg18/2
+	\v3
+http://vmu.loc/rb/vue/tests/eg18
+	form, input
+	\v3d; vue_tpl
+
+http://vmu.loc/rb/vue/tests/eg17
+	[RP0]
+	computed
+	EG markdown editor + preview
+
+http://vmu.loc/rb/vue/tests/eg16/1
+	simple tabs
+
+http://vmu.loc/rb/vue/tests/eg16
+	tabs
+
+
+- http://vmu.loc/rb/vue/tests/eg15
+	tabs
+
+http://vmu.loc/rb/vue/tests/eg14
+	my-1: dd/hiw
+
+- http://vmu.loc/rb/vue/tests/eg13
+	custom router / SimpleRouter
+
+- http://vmu.loc/rb/vue/tests/eg12/8
+	rotes хуки
+- http://vmu.loc/rb/vue/tests/eg12/7
+	router
+		children
+		several components
+
+http://vmu.loc/rb/vue/tests/eg12/6
+	eg router - Named Routes
+
+- http://vmu.loc/rb/vue/tests/eg12/5
+	dd-eg routes
+		router.resolve
+- http://vmu.loc/rb/vue/tests/eg12/4
+	dd-eg routes
+- http://vmu.loc/rb/vue/tests/eg12/3
+	dd-eg routes
+		NotFound
+http://vmu.loc/rb/vue/tests/eg12/2
+	Dynamic Route Matching with Params
+http://vmu.loc/rb/vue/tests/eg12/
+	vue-router
+
+- http://vmu.loc/rb/vue/tests/eg11/
+	.vue
+
+http://vmu.loc/rb/vue/tests/eg10/
+	slot
+	x-template
+
+http://vmu.loc/rb/vue/tests/eg9/
+	rndr folder
+
+http://vmu.loc/rb/vue/tests/eg9/?es6
+	vuetify3
+
+http://vmu.loc/rb/vue/tests/eg8/
+	vue 2 + vuetify
+
+http://vmu.loc/rb/vue/tests/eg7/
+	select
+http://vmu.loc/rb/vue/tests/eg6/
+	input
+	emit
+	$event
+http://vmu.loc/rb/vue/tests/eg5/
+	for
+http://vmu.loc/rb/vue/tests/eg4/
+	component
+	if
+	model
+	bind
+	on
+	for
+	tansition
+http://vmu.loc/rb/vue/tests/eg3/
+	methods
+http://vmu.loc/rb/vue/tests/eg2
+		http://vmu.loc/rb/vue/tests/eg2/?1
+        http://vmu.loc/rb/vue/tests/eg2/?a%20=%201
+	data
+
+http://vmu.loc/rb/vue/tests/eg1/
+		http://vmu.loc/rb/vue/tests/eg1.php
+	html, script

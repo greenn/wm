@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$/../../._/man" />
+    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$/../../.gss/test-gss" />
+    <content url="file://$MODULE_DIR$/../../.vmk/test-vmk" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

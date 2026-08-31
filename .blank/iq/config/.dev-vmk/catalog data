@@ -1,0 +1,34 @@
+-   -   -   -   guzz prrices
+
+http://vmk.loc/api/post/kmod/guzzler/eat?mock=1&data=3
+
+
+-   -   -   -   kot prod filter
+http://vmk.loc/api/post/kmod/catalog/item-filter?type=tombs&id=2&name=classic&value=true
+
+http://vmk.loc/api/kmod/catalog/item-filters
+
+
+-   -   -   -   продукт
+http://vmk.loc/api/get/site/catalog/product?id=14&rebuild=1
+
+-   -   -   -   продукты
+http://vmk.loc/api/get/site/catalog/products?start=14&count=3
+
+http://vmk.loc/api/get/site/catalog/products?filter[]=collection-1&filter[]=vip
+
+http://vmk.loc/api/get/site/catalog/products
+http://granitplace.ru/api/get/site/catalog/products
+
+-   -   -   -   перестройка
+http://vmk.loc/api/site/catalog/force-rebuild
+http://vmk.loc/api/site/catalog/force-rebuild?restart
+http://granitplace.ru/api/site/catalog/force-rebuild?restart
+
+-   -   -   -   продукты
+
+http://vmk.loc/api/kmod/guzzler/dbg/sheet?name=tombs-price3&id=53
+http://vmk.loc/api/get/site/catalog/product?type=tombs&id=53
+
+http://vmk.loc/api/get/site/catalog/product?type=tombs&id=53&rebuild
+http://vmk.loc/api/get/site/catalog/product?type=tombs&id=52&rebuild

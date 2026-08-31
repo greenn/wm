@@ -1,0 +1,95 @@
+<?#3.7.0 - new custom class
+
+
+class app extends rt {
+	static $rClass = 'app';
+	
+	//01
+		static $temp;
+		static $vtpl = false;
+		static $vdef = 0;
+		static $vname = array();
+
+	static function nc($name = true, $subName = false, $usePrefix = true){
+		$n = parent::nc($name, $subName, false);
+		return $usePrefix ? 'ap'.$n : $n; //return $n;
+	}
+}
+
+//менеджер по работе с app классом
+class _app extends _rt {
+	static $rClass = 'app';
+	static $db = array(); //своя база
+	static $cache = array(); //свой cache
+
+	static function rDir(){
+		return ROOT.'/r/app';
+	}
+
+	static function className($name){
+		return "app_$name";
+	}
+
+
+	/*static function namedUrl($title, $addUri = ''){
+		static $menuData = array(); //$menuListByTitle
+		if (!$menuData) {
+			$menuData = app_api::get_prop('list', 'side-menu/list', array('by' => 'name'));
+		}
+		$item = prop($menuData, $title);
+		$resLink = prop($item, 'link');
+		if ($addUri) {
+			$resLink = rtrim($resLink, '/').'/'.ltrim($addUri , '/');
+		}
+		return '/'.ltrim($resLink, '/');
+	}*/
+}
+
+
+function app($name, $method = null/*, $arg1, $arg2*/){
+	return _r_('app', func_get_args());
+}
+
+function app_tpl($name, $tplName = true, $tplCtx = false, $fileExt = 'tpl.php', $method = 'tpl'){
+	return _r_tpl('app', func_get_args());
+}
+
+	function app_tpl_($Args) {
+		return call_user_func_array('app_tpl', (array)$Args);
+	}
+
+	function app_vtpl($name, $tplName = true, $tplCtx = false, $fileExt = 'tpl.php'){
+		return app_tpl($name, $tplName, $tplCtx, $fileExt, 'vtpl');
+	}
+
+
+
+_rt::req('api');
+
+/*
+	ug
+		api_app('side-menu/list', array('by' => 'link'))
+	    api_app('targets/list')
+	    app_api::get_prop('list', 'targets/list')
+*/
+function api_app(/*$method,*/ $requestUri, $data = array()){
+	$method = 'get';
+	if (func_num_args() === 3) {
+		list($method, $requestUri, $data) = func_get_args();
+	}
+	if (is_array($requestUri)) {
+		list($method, $requestUri) = $requestUri;
+	}
+	return rt_api::request($requestUri, $data, $method, $r = 'app');
+}
+
+
+
+class app_api extends _api {
+	static $r = 'app';
+
+	static $dbg = false;
+	static $dbgApi = true;
+	static $dbgMe = true;
+	static $dbgGet = true;
+}

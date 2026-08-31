@@ -1,0 +1,33 @@
+
+
+
+=   =   =   =
+
+eg info page-ctx update
+eg change content output
+    r/site/posts/data/info/1.data.inc
+
+
+=   =   =   =   struct
+
+
+site_mod > site
+
+	modPid - pid mod-страницы
+
+	getInfoFile() - информация о кол-ве элементов
+	    информация для элементов
+
+	    x getItemData() - получить информацию по id
+
+	getItemsInfo() - получить список всех страниц с информацией (без контента)
+
+	getItemByUri() - получить полный данные страницы по url
+	    (информация + content + page-ctx)
+
+
+
+
+	getItem() - получить данные страницы по id
+
+	itemLink() - получить url для страницы по id

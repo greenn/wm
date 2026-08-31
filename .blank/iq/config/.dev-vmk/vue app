@@ -1,0 +1,18 @@
+=   =   =   =
+_rr._list
+=   =   =   =
+_сс(_r('prod-size[1]', 'list'))
+_rp('prod-size[1]', 'list')
+
+
+-   -   -   -
+_cc(_r('app', 'prod-size[1]'));
+_rp('prod-size')
+
+
+
+=   =   =   =
+
+_cc(_r('app', '$data'));
+
+_rp('prod-size', 'list')

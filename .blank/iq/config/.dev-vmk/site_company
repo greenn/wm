@@ -1,0 +1,28 @@
+<?
+
+_site::reg('company', array(
+	'nc' => array(
+		'base' => 'cmy'
+	),
+	'val' => array(
+		'titul-pic' => array(
+			1 => 'IMG_6978-re.jpg',
+			2 => 'IMG_6777-re.jpg',
+			3 => 'IMG_6767-re.jpg',
+			4 => 'IMG_6937-re.jpg',
+		)
+	)
+));
+
+
+site_company < site
+
+	sliderPic() - получить idn картинки
+
+	getItemData($pid) - получить информацию по id
+
+	getTitulData() - получить данные для slider
+
+    itemLink() - получить url для страницы по id
+
+}

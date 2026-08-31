@@ -1,0 +1,91 @@
+# etag
+    ^
+    @: pepper  //добавляет инкремент в время всех etagов
+        //есть перчик,
+        //который позволяет разово, но точно обновить все! значения etag
+
+	opt:()  //парсит и устонавливает опцию для заголовков
+	    ^
+	    autofile
+
+	@: debug  //делает виде etag возможным для визуального сопоставления и отлаживания
+	@: debug_timePattern  //вид etag для отладки
+	    //'{y-m-d H:i:s[u]}';
+	
+	value_debug:()  //функция подмены значения etag для отлаживания
+	    //{%s-%s-%s} - [domain, path, version]
+
+	value:()  //формирование значения etag
+	    //{%s-%s-%s} - hash[domain, path, version]
+
+	basedOnFile:()  //формирование etag относительно времени последнего изменения предоставленного файла
+
+	autofile:()  //функция формирования ответных заголовков по файлу, от которого строится значение etag
+
+-   -   -   -   [eg]
+
+_needphp('headers');
+$cacheState = SITE_CACHE !== true ? SITE_CACHE : array('etag_ctx' => array(
+    __FILE__,
+    ($sd = dirname(__FILE__))."$sd/llink.css.inc",
+    "$sd/button.css.inc",
+    "$sd/button-b2.css.inc",
+    "$sd/input.css.inc",
+    "$sd/pane.css.inc",
+    "$sd/toggler.css.inc",
+));
+    $cacheState = '1h';
+    $cacheState = array('max-age' => 60);
+    $cacheState = array('until' => 'next sunday');
+
+headers('css', 'utf8', 'nosniff', $cacheState);
+
+headers('js', 'utf8', 'nosniff', SITE_CACHE, SITE_CACHE ? $cacheState : false);
+
+headers('js', 'utf8', 'nosniff', $cacheState, SITE_CACHE);
+
+//use CTRL+F5 to update page
+//usage will-change-etag [cz changed modified_time]
+
+_needphp('ck'); $ck = ck(URI); if (!is_numeric($ck)) $ck = 1; ck(URI, ++$ck);
+if (!'debug') dx(
+    getallheaders(),
+    headers_list(),
+    x('last_headers'),
+    headers_obj(etag::debug(true), $cacheState)->prepare_output(),
+    date('H:i:s y/m/d'),
+    notch()
+);
+<?='['.notch().']'.date(' y/m/d H:i:s').Headers::lastEtagInfo()?>
+//<?='['.notch().']'.date(' y/m/d H:i:s').Headers::lastEtagInfo()."\r\n"?>
+/*<?='['.notch().']'.date(' y/m/d H:i:s').Headers::lastEtagInfo()?>*/
+<!--<?='['.notch().']'.date(' y/m/d H:i:s').Headers::lastEtagInfo()?>-->
+/* * /__/**/
+/* * /<?='['.notch().']'?>/**/
+<?='/*['.notch().']*/'?>
+<?='//['.notch().']'?>
+
+
+$sd = $r->dir();
+$r->headers('js', __FILE__, array(
+   "$sd/js/set.login.js.inc",
+   "$sd/js/set.password.js.inc",
+   "$sd/js/set.submit.js.inc",
+   "$sd/js/submit.js.inc",
+   "$sd/js/intro.js.inc",
+));
+
+headers('js', 'utf8', 'nosniff', etag::ctx(
+    __FILE__,
+    ($sd = dirname(__FILE__)).'batchedProps.js.php',
+    "$sd/",
+    ''
+));
+
+$IQ = 0; include_once $_SERVER['DOCUMENT_ROOT'].'/web/iq.inc';
+    _needphp('headers', 'notch');
+    $sd = dirname(__FILE__);
+    headers('js', 'utf8', 'nosniff', etag::ctx(
+        "$sd/rbox.js.inc",
+    __FILE__), SITE_CACHE);
+-   -   -   -

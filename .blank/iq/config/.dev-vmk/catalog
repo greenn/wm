@@ -1,0 +1,17 @@
+-   -   -   - get product
+http://vmk.loc/api/site/catalog/product?idn[]=false&idn[]=/pamyatniki/53/
+http://vmk.loc/api/site/catalog/product?idn%5B%5D=false&idn%5B%5D=%2Fpamyatniki%2F53%2F
+http://vmk.loc/api/site/catalog/product?idn=pamyatniki/53
+http://vmk.loc/api/site/catalog/product?section=tombs&id=16
+
+
+
+-   -   -   -force-rebuild
+http://vmk.loc/api/site/catalog/force-rebuild?restart
+http://vmk.loc/api/site/catalog/force-rebuild?section=tombs
+просмотр
+    http://vmk.loc/api/site/catalog/force-rebuild?section=tombs
+
+https://granitplace.ru/api/site/catalog/force-rebuild?restart
+
+

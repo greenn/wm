@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !^/kot/r-test/index\.php
+RewriteRule ^ /kot/r-test/index.php [L]

@@ -1,0 +1,117 @@
+#0.2.0
+
+/*
+
+$crud = new crud_json(array(
+    'sessionName' => 'db_suppliers',
+    'dataFile' => APP.'/data/storage/suppliers/suppliers.json'
+));
+
+*/
+
+
+# crud_json                 //комбайн для операций с данными хрянащиеся в json файле
+								специального формата [oo emptyListingData]
+
+    << responseData         [oo web/php/response.struct]
+
+    data*
+                            объект данных
+
+    scheme*
+                            схема данных
+
+    ^<__construct()
+
+    sessionName*
+                            ипя переменной на данные объекта в сессии
+                                sessionName|sessionData|
+
+    dataFile*
+                            путь до json-файла
+
+    set()
+                            установка опций
+                                w
+                                dataFile
+                                sessionName
+
+    fileData:()
+                            получение данных из json-массива
+
+    setDataFile*()
+                            установка json-файла в объект
+
+    emptyListingData:*()
+                            данные для пустого листинга
+                                в 0-ой элемент записываются вспомогательные данные
+                                    заодно исключая элемент с id=0
+    verifyListingData*()
+                            проверяет установленный файл, на действительно ли он является ^листингом
+                                если ошибка данных, то файл бекапиться, и создаётся пустой лист
+
+    setSessionData*()
+                            установка данные в связке со сессией
+
+    setDataScheme*()
+                            установка схемы данных
+
+    dataSync() / *
+                            обновляет данные, относительно своих текущих данных
+                                в файле
+                                в сессии
+
+    msgTpl
+                            список сообщение для ошибок
+
+    error_read_slice()
+                            обработчик ошибок для метода dataPath в get_slice
+
+
+
+    get*()
+                            получение данных по idn
+                                с последующей возможностью сделать slice по свойствам через dataPath
+
+    add*()
+                            внутреняя операциип прямого добавления данных в список следующим элементом
+    upd*()
+
+    del*()
+
+    checkId()
+
+    checkData()
+
+
+
+    add*()
+
+
+    create()
+                            процесс создания нового элемента в списке
+
+    read()
+
+    update()
+
+    delete()
+
+
+-   -   -   -   eg
+
+$crud = new crud_json(array(
+    'dataFile' => APP.'/data/storage/suppliers/suppliers.json',
+    //'sessionName' => 'db_suppliers',
+    'w' => array(
+        'item' => wbc('поставщик',
+            '0:,а,у,,ом,е',
+            '0:и,ов,ам,ов,ами,ах',
+            '0\а:2,3,4,>20/[234]$/;0\ов:'
+        )
+    ),
+
+    'msgTpl' => array(
+        'GS' => '"Данных %slicePath у поставщика %prop нет"'
+    )
+));

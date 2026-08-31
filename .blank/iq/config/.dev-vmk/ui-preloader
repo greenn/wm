@@ -1,0 +1,15 @@
+rb_router::process('page', array(
+    'page-ctx' => array(
+        'content' => $content,
+        'content-title' => page($pid, 'title', 'content'),
+        'footer-v' => 2,
+
+        'preloader' => array(
+            'close' => false,
+            'nc' => '-op',
+            'fixed' => false,
+            'fixed' => true,
+        ),
+
+    ),
+));

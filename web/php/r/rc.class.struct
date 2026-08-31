@@ -1,0 +1,40 @@
+Это расширение r-класса дополнительными опциями до класса-компонента
+-   -   -   -
+# RC
+
+r()
+tpl()
+dtpl()
+cacheState()  сладкая функция для установки параметра в headers(), если он не передан явно
+        если $set = true
+            то etag относительно filePath или авто-определения
+        если false
+            то 'cache-off'
+        если null /  по умолчанию
+            то только установка сайта SITE_CACHE
+                которая добавляется к любому варианту
+    ~@ set
+    ~@ filePath
+        //используется только при ¦~@ set=true¦|¦~@ set=null, SITE_CACHE=true¦
+declOutput()
+    :60 - строка хорошая, показывает, что если declOutput был не из стандартного файла, то получить его путь { не во всех сулчаях может работать (например если и тот файл тоже есть, тогда надо использовать просто jsonOutput, а не declOutput), но в назидание}
+jsonOutput()
+headers()
+    ~@ headerType
+    ~@ filePath
+        для cacheState (вторым аргументом)
+            и filePath будет использован только при ¦~@ cacheOpts=true¦
+    ~@ cacheOpts  //аргумент будет обработан cacheState:() и добавлен в headers()
+    ~@ moreHeaders  //дополнительные заголовки для headers()
+    //[eg
+        $r->headers('css', __FILE__, true);
+        ==
+        $r->headers('css', false, array('etag_file' => FILE));
+    ]
+version()
+isTestPage()
+
+
+-   -   -   -   id
+//$r->jsHeaders();
+

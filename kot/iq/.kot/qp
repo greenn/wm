@@ -1,0 +1,22 @@
+kot/r/app/app-side/side-head.vue.js.inc
+kot/r/app/app-side/side-head.vue.tpl.inc
+kot/r/app/side-menu/v-2/side-menu.vue.js.inc
+kot/r/app/side-menu/v-2/side-menu.vue.tpl.inc
+kot/r/app/side-menu/api/v0/list.data.php
+
+kot/iq/.dev/qp
+kot/iq/.dev/qd
+._/hp/abbr.man
+._/hp/struct.legend
+._/man/site page
+._/man/page router
+iq.inc
+iq/config/css/css.php
+kot/iq/css.php
+
+iq/config/pages/company.inc
+iq/config/wd/company.inc
+iq/config/wd/company-titul.inc
+r/site/css/ft.css.php
+r/site/css/page.css.php
+r/site/page/html.tpl.php

@@ -1,0 +1,9 @@
+
+http://vmk.loc/api/get/site/catalog/products?type=tombs&dbg
+http://vmk.loc/api/get/site/catalog/products?type=tombs
+
+
+http://vmk.loc/api/post/site/hp/select-city?title=Псков
+
+
+http://vmk.loc/api/get/site/posts/items

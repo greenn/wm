@@ -1,0 +1,24 @@
+i_color()
+i_res()
+gi_1px()
+gdi_1px()
+gi_dash(
+gdi_dash(
+di_encode()
+
+-   -   -   -   dbg
+
+if(1)  $img = imageCreateTrueColor($img_w, $set['height']);
+if(0)  $img = imageCreateTrueColor(4, 2);
+
+if(1)  imagefilledrectangle($img,
+    $set['dash_start'], 0,
+    $set['dash_start'] + $set['dash_width'], $set['height'],
+    $dashColor
+);
+
+if(0)  imagefilledrectangle($img,
+    0, 0,
+    0, 0,
+    $dashColor
+);

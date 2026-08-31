@@ -1,0 +1,14 @@
+
+-   -   -   -   eg
+//v1
+$response = api_site('get', 'catalog/product', array('type' => $type, 'id' => $id ));
+
+//v2
+$itemData = site_api::get_data_prop('item', 'catalog/product', array('type' => $type, 'id' => $id ));
+
+//v3
+$itemData = site('catalog', 'api_data_prop', 'item', 'product', array('type' => $type, 'id' => $id ));
+
+//v4
+$Catalog = _site::name('catalog'); 
+$itemData = $Catalog::api_data_prop('item', 'product', array('type' => $type, 'id' => $id ));

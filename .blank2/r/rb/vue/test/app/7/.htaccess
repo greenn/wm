@@ -1,0 +1,3 @@
+#oo api/.htaccess
+RewriteEngine on
+RewriteRule . index.php

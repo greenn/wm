@@ -1,0 +1,26 @@
+https://momentjs.com/docs/#/displaying/format/
+
+moment(moment(2001).diff(1) - разница 2 секунды
+
+moment( moment(100200).diff(100000) ).utc().format('HH:mm:ss.SSSS')
+'00:00:00.2000'
+
+YYYY/MMM/DD HH:mm:ss
+
+format('HH:mm:ss YYYY/MMM/DD')
+
+
+-	-	-	-	https://stackoverflow.com/questions/50149346/momentjs-seconds-from-now
+
+var exp = moment(startdate, 'DD.MM.YYYY HH:mm:ss');
+moment().diff(exp, 'minutes');
+
+
+-	-
+var time  =  moment('02.05.2018 18:05:03');
+
+var duration = moment.duration(moment().diff(time));
+var mins = duration.asMinutes();
+
+console.log(mins)
+-	-	-	-

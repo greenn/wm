@@ -1,0 +1,30 @@
+.next-enter {
+    opacity: 0;
+    transform: scale3d(2, 0.5, 1) translate3d(400px, 0, 0);
+}
+
+.next-enter-to { transform: scale3d(1, 1, 1); }
+.next-enter-active,
+.next-leave-active { transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+.next-leave { transform: scale3d(1, 1, 1); }
+
+.next-leave-to {
+    opacity: 0;
+    transform: scale3d(2, 0.5, 1) translate3d(-400px, 0, 0);
+}
+
+/* If animations are reduced at the OS level, use simpler transitions */
+@media screen and (prefers-reduced-motion: reduce) {
+    .next-enter {
+        opacity: 0;
+        transform: translate3d(100px, 0, 0);
+    }
+
+    .next-enter-active,
+    .next-leave-active { transition: 0.5s; }
+
+    .next-leave-to {
+        opacity: 0;
+        transform: translate3d(-100px, 0, 0);
+    }
+}

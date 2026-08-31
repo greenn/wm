@@ -1,0 +1,90 @@
+td того по сути
+    это объект
+        с путями до составляющих ресурсов
+
+        с возможностями относительно установленных путей
+            req()
+            inc()
+            jd()
+            jdsn()
+        с возможностью расширения объекта через конфиг .r.inc
+    		
+-   -   -   -
+@options
+    опции записываются как (key: value через optSet, value = true)
+        R_BASE - брать по путю заявленный rBase
+        R_Relative - брать первый парент за rBase
+        - relBase - по идеи дляобращение к своей базовой директории из суб-директорий
+        - suffix - по ижеи для прозрачного использования версионых суб-директорий
+@*mutualOptions
+@*pathPattern
+@c
+@*cc
+@name //resource name
+@var //name variable
+@rName //resource path name
+@vName //resource variable name
+@jn //resource json-data-interface name
+@dir //resource directory path
+@uri //resource directory root-relative url
+@url //resource directory full url
+
+
+
+__construct()
+    ::
+        handleOptions(*)
+        locate()
+
+handleOptions()
+
+opt()
+optSet()
+
+locate()
+    определение основы
+        через pattern (pathPattern|setPattern / get_name|parse_name)
+setPattern()
+get_name()
+ parse_name() //[rn берёт имя из переданного конфига по '.r']
+    $
+*setName()
+    установка основы для ресурса
+    := name | dir | rName | vName | jn | uri | url
+
+
+attachClass()
+initAutoClass() // initAutoClass|initEmptyClass|
+initClass()
+    $ class config path
+        //defPattern  %s.r.inc
+        objClass
+        objFunction
+        RC
+        replaceWith
+
+
+ __get()
+    данные класса @c
+ __call()
+    колбеки класса @c
+    (): dir | jn | url | uri | name | rName | rvName #~ extendStr
+        //$this->dir($cFilename.'.r.inc')
+extendStr()
+
+
+req()
+inc()
+jd()
+jdsn()
+
+
+
+-   -   -   -   id
+
+//$rr->headers('kotpls'); релатив-r заголовки для kotpls
+
+
+-   -   -   -   api
+
+файл (api.conf) подбирается в apiConnect

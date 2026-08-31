@@ -1,0 +1,15 @@
+#AllowOverride All
+RewriteEngine on
+#RewriteRule reg index.php
+##RewriteCond %{REQUEST_FILENAME} !index\.php
+#RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . index.php
+#RewriteRule ^(.*)$ index.php [L,QSA]
+#RewriteRule ^((?!index\.php).+)$ /index.php [L]
+
+#RewriteRule . /api.php
+#RewriteRule . /rb/api/router.php
+
+#eg другой
+#RewriteCond %{REQUEST_FILENAME} !/api/index\.php
+#RewriteRule ^(.*)$ api/index.php

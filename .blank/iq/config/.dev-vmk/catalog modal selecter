@@ -1,0 +1,7 @@
+
+_rp('modal-selecter', 'toggleState')
+
+<span fxr v-for="(size, sizeIndex) in list[key].sizes" :key="sizeIndex">
+    {{ size }}
+    <span sep mh6 v-if="sizeIndex < list[key].sizes.length - 1">*</span>
+</span>

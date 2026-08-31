@@ -1,0 +1,28 @@
+page.tpl.php
+    r/site/page/page.tpl.php
+
+выводить контент страницы
+
+handleContentCtx
+        r/site/page/page.class.inc:22
+    приводит весь контент в массив
+
+    contents
+
+        каждый элемент (конфиг) которого
+        потом запускается через
+            content-item.tpl.php
+                r/site/page/content-item.tpl.php
+        передавай в него свой конфиг
+
+-   -   -   -   content-wrapper
+
+content-wrapper.tpl
+    основная конва с breadcrumbs и vmenu
+
+content-wrapper-1
+    основной / текстовый вариант
+
+content-wrapper-2
+    ak gallery
+

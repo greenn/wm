@@ -1,0 +1,4 @@
+
+-   -   -   -
+<span class="<?=$nPLI?>-price-val">{{ item['price-discount']['value-format'] }}</span>
+<span class="<?=$nPLI?>-price-unit">{{ item['price-discount']['currency-title'] }}</span>

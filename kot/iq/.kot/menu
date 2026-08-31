@@ -1,0 +1,16 @@
+данные
+    kot/r/app/side-menu/api/v0/list.data.php
+
+api
+    http://vmk.loc/api/get/kot/side-menu/v0/list
+
+
+-   -   -  - вывод
+
+kot-app.tpl.php
+    kot/r/app/app/kot-app.tpl.php
+app-side
+    kot/r/app/app-side/app-side.vue.tpl.inc
+side-menu
+    <side-menu></side-menu>
+    kot/r/app/side-menu/v-2/side-menu.vue.tpl.inc

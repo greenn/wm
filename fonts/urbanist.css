@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Urbanist';
+    src: url('/urbanist/transfonter/Urbanist-Bold.eot');
+    src: url('/urbanist/transfonter/Urbanist-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/urbanist/transfonter/Urbanist-Bold.woff2') format('woff2'),
+        url('/urbanist/transfonter/Urbanist-Bold.woff') format('woff'),
+        url('/urbanist/transfonter/Urbanist-Bold.ttf') format('truetype'),
+        url('/urbanist/transfonter/Urbanist-Bold.svg#Urbanist-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Urbanist';
+    src: url('/urbanist/transfonter/Urbanist-Black.eot');
+    src: url('/urbanist/transfonter/Urbanist-Black.eot?#iefix') format('embedded-opentype'),
+        url('/urbanist/transfonter/Urbanist-Black.woff2') format('woff2'),
+        url('/urbanist/transfonter/Urbanist-Black.woff') format('woff'),
+        url('/urbanist/transfonter/Urbanist-Black.ttf') format('truetype'),
+        url('/urbanist/transfonter/Urbanist-Black.svg#Urbanist-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,0 +1,7 @@
+#oo api/.htaccess
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !^/kot/test
+RewriteCond %{REQUEST_URI} !^/kot/iq
+RewriteCond %{REQUEST_URI} !^/kot/r
+RewriteCond %{REQUEST_URI} !^/kot/img
+RewriteRule . index.php

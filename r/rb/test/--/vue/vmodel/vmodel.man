@@ -1,0 +1,2 @@
+https://v3.ru.vuejs.org/ru/guide/migration/v-model.html#%D1%81%D0%B8%D0%BD%D1%82%D0%B0%D0%BA%D1%81%D0%B8%D1%81-%D0%B2-2-x
+

@@ -1,0 +1,37 @@
+#9.4.0
+#oo /.b/.htaccess
+
+RewriteEngine on
+RewriteBase /
+
+# dbg
+RewriteCond 1 10
+#RewriteCond %{REQUEST_URI} !\/htaccess.php
+RewriteRule ^ iq/url/htaccess.php?sid=1&REQUEST_URI=%{REQUEST_URI}&port=%{SERVER_PORT}&https=%{HTTPS}&env-https=%{ENV:HTTPS}&proto=%{HTTP:X-Forwarded-Proto}&host=%{HTTP_HOST}&REQUEST_FILENAME=%{REQUEST_FILENAME} [L]
+
+# редирект на HTTPS
+RewriteCond 1 10
+RewriteCond %{HTTP_HOST} ^granitplace\.ru$
+#RewriteCond %{HTTP:X-Forwarded-Proto} http
+#RewriteCond %{HTTPS} off
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+RewriteCond 1 10
+RewriteRule ^favicon\.ico$ i/favicon/04/favicon.ico [L]
+
+RewriteCond 1 10
+RewriteRule ^robots\.txt$ iq/config/url/robots.txt.php [L]
+
+RewriteCond 1 10
+RewriteRule ^sitemap\.xml$ iq/config/url/sitemap.xml.php [L]
+
+# Перенаправление запросов с /test/ на /blank-gss/
+RewriteCond 1 1
+RewriteCond %{DOCUMENT_ROOT}/blank-gss/$1 -f
+RewriteRule ^test/(.*)$ test-gss/$1 [L,NC]
+
+RewriteCond 1 1
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ iq/router.php

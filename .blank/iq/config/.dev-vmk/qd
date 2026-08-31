@@ -1,0 +1,97 @@
+
+modalExternalCick
+                modalCloseVerify
+                onClick
+                verifyModal
+
+                verifyClosingOnSelfClick
+                BeyondSelecter
+
+
+
+-   -   -
+http://vmk.loc/api/get/site/catalog/products?type=tombs&dbg
+https://granitplace.ru/api/get/site/catalog/products?type=tombs&dbg
+
+
+
+$tplContent = sprintf(static::$pn_pathContentItem, $idn); //"data/content/$idn";
+
+
+http://vmk.loc/wd/company?cy-ttl-v=1
+
+-   -   -   -   CSS VAR
+
+<?
+    $nvBr = "--$nM-br";
+    $vBr = "var($nvBr)";
+?>
+    <?=$nvBr?>: 30px;
+}
+
+-   -   -   -
+<!--
+    .sign_segment
+    #billboard li
+        это -item
+    .sign_segment > div
+    #billboard li div
+        это -pic
+-->
+
+ob_start(); ?>
+$(function() {
+	var $stylesFromBody = $('BODY STYLE');
+	$('HEAD').append($stylesFromBody);
+})
+<? js::req(-1, false, false, ob_get_clean());
+
+<?
+
+js::req(-1, false, false, <<<js
+    $(function(){
+        console.log('company-titul', { q: $('.$nT-item').length })
+    })
+js
+);
+
+-   -   -   -
+
+vmk.loc/test/board.php
+vmk.loc/iq/test/css/grid/rowspan.php
+vmk.loc/iq/test/css/grid/colspan.php
+vmk.loc/iq/test/php/prop-class.php
+vmk.loc/test/font/namu.php
+
+http://vmk.loc/test/spinner-1.php
+
+-   -   -   -   тестирование namu
+    кроме woff2 походу ничего не работает
+        хотя если подключён только 400
+            то fw работает.. {Жесссть
+                по крайне мере bold
+                    тока он походу
+http://vmk.loc/test/font/namu.php
+
+
+
+_kot::req_vue('ui', 'form/field', array(), 'ui-field');
+$Self::req_vue('form/field', array(), 'ui-field');
+
+-	-	-	-	api
+
+-	-	-	-	live
+https://admin.granitplace.ru/
+
+https://granitplace.ru/iq/db/install.php
+
+-   -   -   -   sd
+
+
+<?= call_rp('aos', 'init_js', array(
+	'easing' => 'ease-out-back',
+	'duration' => 500,
+	'offset' => 0,
+), true) ?>
+
+

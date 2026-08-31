@@ -1,0 +1,22 @@
+# External/local projects used only as references
+/.ash/
+/.gss1/
+/.kp/
+/.kp2/
+/.ripr/
+/.tosno/
+/.vmk4/
+/.vmk4 — копия/
+/.zo/
+
+# Local IDE state
+/.idea/
+
+# Owner-defined source/exclusion zones
+/rule/dd/-/
+/rule/ai-/
+
+# Project-local settings may contain credentials and customer data
+/site/settings/
+/.blank/iq/config/settings/
+/.blank2/site/settings/

@@ -1,0 +1,70 @@
+
+
+-	-	-	-	dd
+
+router-view name=
+
+-	-	-	-	dbg
+
+let sideMenu = _rr._list['side-menu[1]'];
+_cc(sideMenu.map)1
+
+_storage.get(sideMenu.name0)
+
+sideMenu.ls.remove('\0')
+sideMenu.ls.set('qq', 1)
+
+_storage.remove(sideMenu.name0)
+
+
+_storage.remove([sideMenu.name0])
+_storage.get(sideMenu.name0)
+
+sideMenu.hasLink(sideMenu.items[0])
+_rp('user-snippet')
+
+
+-	-	-	-	id
+
+kmod
+kapp
+
+
+-	-	-	-	links
+
+http://vmk.loc/kot/site/site-menu
+http://admin.vmk.loc/site/site-menu
+
+
+-	-	-	-	test
+http://vmk.loc/iq/test/css/lay/h100-2.php
+http://vmk.loc/iq/test/rt/cook_vueVReq_args.php
+http://vmk.loc/iq/test/css/c
+-	-	-	-	apiss-link/roll-box.php
+
+
+
+
+$data = api_kot('side-menu/v0/list');
+
+-	-	-	-	r/test
+http://vmk.loc/kot/r-test/side-menu
+http://vmk.loc/kot/r-test/side-menu/side-menu?side-menu
+http://vmk.loc/kot/r-test/side-menu/b/c?11
+
+http://admin.vmk.loc/#/
+http://vmk.loc/company
+
+-	-	-	-	dbg
+_rp('tpl-passes--station-freq')
+_rp('target-constructor', 'selecterOptions')
+_rp('tpl-passes--station-freq', 'validateItems')
+_rp('ui')
+
+_r.pick('target-view', 'targets')
+_r.pick('target-constructor', 'list')
+_cc(_rr._list['target-constructor'].reslist);
+_Targets.getters.getItem('10000').forecast
+_Targets.getters.getList
+_Targets.state.list
+-	-	-	-	info
