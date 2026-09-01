@@ -2,7 +2,7 @@
 
 Agent-first карта текущего WM. Начинай здесь после корневого `AGENTS.md`.
 `aidocs` даёт точные entry points и ограничения; human-facing объяснения будут
-жить отдельно в `man/wm`.
+жить отдельно в автономном [Documentation Site](../man/README.md).
 
 ## Быстрый маршрут
 

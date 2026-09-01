@@ -1,0 +1,363 @@
+{
+  "site": {
+    "title": "WM Developer Docs",
+    "defaultDocument": "wm/index",
+    "description": "Human-facing документация framework WM"
+  },
+  "sections": [
+    {
+      "id": "wm",
+      "title": "Основы WM",
+      "items": [
+        "wm/index",
+        "wm/architecture",
+        "wm/bootstrap",
+        "wm/development",
+        "wm/versioning",
+        "wm/legacy"
+      ]
+    },
+    {
+      "id": "site",
+      "title": "Site и страницы",
+      "items": [
+        "site/index",
+        "site/routing",
+        "site/pages",
+        "site/components",
+        "site/assets"
+      ]
+    },
+    {
+      "id": "admin",
+      "title": "Admin",
+      "items": [
+        "admin/index",
+        "admin/routing",
+        "admin/security"
+      ]
+    },
+    {
+      "id": "rm",
+      "title": "Resource Managers",
+      "items": [
+        "rm/index",
+        "rm/rb",
+        "rm/lay",
+        "rm/site",
+        "rm/gss3"
+      ]
+    },
+    {
+      "id": "reference",
+      "title": "Справочник",
+      "items": [
+        "reference/php",
+        "reference/api",
+        "reference/assets",
+        "reference/testing",
+        "reference/htaccess"
+      ]
+    },
+    {
+      "id": "process",
+      "title": "Процесс и история",
+      "items": [
+        "sug/index",
+        "log/index",
+        "log/2026/0831-rule-ai",
+        "log/2026/0901-agents-aidocs",
+        "log/2026/0901-documentation-site"
+      ]
+    }
+  ],
+  "documents": {
+    "wm/index": {
+      "title": "WM за 10 минут",
+      "navTitle": "Начало работы",
+      "summary": "Модель framework, project и трёх типов connector.",
+      "status": "current",
+      "tags": ["wm", "architecture", "start"],
+      "file": "wm/index.md",
+      "aside": "wm/index.aside.md",
+      "related": ["wm/architecture", "wm/bootstrap", "rm/index"]
+    },
+    "wm/architecture": {
+      "title": "Архитектура WM",
+      "navTitle": "Архитектура",
+      "summary": "Request flow, ownership и границы framework/project.",
+      "status": "current",
+      "tags": ["architecture", "request", "project", "resource"],
+      "file": "wm/architecture.md",
+      "aside": "wm/architecture.aside.md",
+      "related": ["wm/bootstrap", "site/routing", "rm/index"]
+    },
+    "wm/bootstrap": {
+      "title": "Bootstrap, Web и IQ",
+      "navTitle": "Bootstrap и IQ",
+      "summary": "Local/shared web, iqSite, iqPro и вычисляемые пути.",
+      "status": "unresolved",
+      "tags": ["bootstrap", "web", "iq", "settings"],
+      "file": "wm/bootstrap.md",
+      "aside": "wm/bootstrap.aside.md",
+      "related": ["wm/architecture", "site/routing", "rm/site"]
+    },
+    "wm/development": {
+      "title": "Разработка в WM",
+      "navTitle": "Рабочий процесс",
+      "summary": "Runtime, naming, DRY, документация и безопасная проверка.",
+      "status": "current",
+      "tags": ["php", "vue", "naming", "workflow"],
+      "file": "wm/development.md",
+      "related": ["reference/testing", "wm/versioning", "sug/index"]
+    },
+    "wm/versioning": {
+      "title": "Версия и Git",
+      "navTitle": "Версия и Git",
+      "summary": "Атомарные commits, PATCH, main и независимая версия web.",
+      "status": "current",
+      "tags": ["version", "git", "commit", "main"],
+      "file": "wm/versioning.md",
+      "related": ["wm/development", "log/index"]
+    },
+    "wm/legacy": {
+      "title": "Current, legacy и unresolved",
+      "navTitle": "Legacy-границы",
+      "summary": "Как не смешать поколения pages, Vue и PHP helpers.",
+      "status": "legacy",
+      "tags": ["legacy", "v1", "v2", "vue2"],
+      "file": "wm/legacy.md",
+      "related": ["site/routing", "reference/php", "rm/site"]
+    },
+    "site/index": {
+      "title": "Устройство сайта",
+      "navTitle": "Обзор сайта",
+      "summary": "Site environment, project RM и путь от URL к HTML.",
+      "status": "current",
+      "tags": ["site", "page", "project", "gss3"],
+      "file": "site/index.md",
+      "related": ["site/routing", "site/pages", "site/components"]
+    },
+    "site/routing": {
+      "title": "Routing страниц",
+      "navTitle": "Routing",
+      "summary": "Pages v2, handler selection, 404, redirect и Vue Router.",
+      "status": "unresolved",
+      "tags": ["router", "pages-v2", "404", "redirect", "vue-router"],
+      "file": "site/routing.md",
+      "aside": "site/routing.aside.md",
+      "related": ["site/pages", "reference/htaccess", "admin/routing"]
+    },
+    "site/pages": {
+      "title": "Page data и страницы GSS3",
+      "navTitle": "Страницы и page data",
+      "summary": "Поля страниц и подтверждённая сборка семи страниц примера.",
+      "status": "unresolved",
+      "tags": ["pages", "gss3", "templates", "content"],
+      "file": "site/pages.md",
+      "aside": "site/pages.aside.md",
+      "related": ["site/components", "rm/gss3", "site/routing"]
+    },
+    "site/components": {
+      "title": "Компоненты и templates сайта",
+      "navTitle": "Компоненты и templates",
+      "summary": "Как project page собирается из RM components и templates.",
+      "status": "current",
+      "tags": ["component", "template", "rm", "rmain"],
+      "file": "site/components.md",
+      "related": ["rm/gss3", "rm/rb", "rm/lay"]
+    },
+    "site/assets": {
+      "title": "Assets и client app сайта",
+      "navTitle": "Assets и Vue",
+      "summary": "CSS, JS, images, fonts, UV и client history.",
+      "status": "current",
+      "tags": ["assets", "vue3", "images", "uv", "qv"],
+      "file": "site/assets.md",
+      "related": ["reference/assets", "site/routing", "reference/testing"]
+    },
+    "admin/index": {
+      "title": "Административное приложение",
+      "navTitle": "Обзор admin",
+      "summary": "Канонический entry, current wrapper и граница named RM admin.",
+      "status": "unresolved",
+      "tags": ["admin", "entry", "rm", "kot"],
+      "file": "admin/index.md",
+      "related": ["admin/routing", "admin/security", "reference/api"]
+    },
+    "admin/routing": {
+      "title": "Admin routing и Vue Router",
+      "navTitle": "Routing и Vue Router",
+      "summary": "Direct URL, reload, SPA fallback и server responsibilities.",
+      "status": "unresolved",
+      "tags": ["admin", "routing", "vue-router", "history"],
+      "file": "admin/routing.md",
+      "aside": "admin/routing.aside.md",
+      "related": ["admin/security", "reference/htaccess", "site/routing"]
+    },
+    "admin/security": {
+      "title": "Безопасность admin",
+      "navTitle": "Безопасность",
+      "summary": "Authentication, ACL, CSRF, API и безопасные ошибки.",
+      "status": "current",
+      "tags": ["admin", "security", "acl", "csrf", "api"],
+      "file": "admin/security.md",
+      "related": ["reference/api", "admin/routing", "reference/testing"]
+    },
+    "rm/index": {
+      "title": "Resource Managers",
+      "navTitle": "Как устроен RM",
+      "summary": "Manager, root, connector, component и template contract.",
+      "status": "current",
+      "tags": ["rm", "resource", "connector", "component"],
+      "file": "rm/index.md",
+      "related": ["rm/rb", "rm/lay", "rm/site", "rm/gss3"]
+    },
+    "rm/rb": {
+      "title": "RB — базовые ресурсы WM",
+      "navTitle": "RM rb · 26",
+      "summary": "Все 26 matching components, их группы и риски.",
+      "status": "current",
+      "tags": ["rm", "rb", "components", "router2", "vue", "wd"],
+      "file": "rm/rb/index.md",
+      "aside": "rm/rb/aside.md",
+      "related": ["rm/index", "rm/lay", "reference/assets"]
+    },
+    "rm/lay": {
+      "title": "LAY — элементы компоновки",
+      "navTitle": "RM lay · 6",
+      "summary": "Шесть layout components, templates и consumers.",
+      "status": "current",
+      "tags": ["rm", "lay", "layout", "templates"],
+      "file": "rm/lay/index.md",
+      "aside": "rm/lay/aside.md",
+      "related": ["rm/index", "rm/rb", "site/components"]
+    },
+    "rm/site": {
+      "title": "SITE — environment и целевой RM",
+      "navTitle": "RM site · gap",
+      "summary": "Различие IQ site и отсутствующего current v2 named RM.",
+      "status": "unresolved",
+      "tags": ["rm", "site", "iq", "rmain", "legacy"],
+      "file": "rm/site/index.md",
+      "related": ["wm/bootstrap", "site/index", "rm/gss3"]
+    },
+    "rm/gss3": {
+      "title": "GSS3 — project RM примера",
+      "navTitle": "RM gss3 · 21",
+      "summary": "21 project component, pages, templates, assets и gaps.",
+      "status": "unresolved",
+      "tags": ["rm", "gss3", "project", "components", "templates"],
+      "file": "rm/gss3/index.md",
+      "aside": "rm/gss3/aside.md",
+      "related": ["site/pages", "site/components", "rm/site"]
+    },
+    "reference/php": {
+      "title": "PHP loaders и helpers",
+      "navTitle": "PHP и libraries",
+      "summary": "Как выбрать loader, include helper, library или RM connector.",
+      "status": "current",
+      "tags": ["php", "need", "lib", "include", "helpers"],
+      "file": "reference/php/index.md",
+      "aside": "reference/php/aside.md",
+      "related": ["wm/bootstrap", "reference/api", "wm/legacy"]
+    },
+    "reference/api": {
+      "title": "Root API и component endpoints",
+      "navTitle": "API",
+      "summary": "Method resolution, RM dispatch, response и security contract.",
+      "status": "unresolved",
+      "tags": ["api", "endpoint", "method", "json", "auth"],
+      "file": "reference/api/index.md",
+      "aside": "reference/api/aside.md",
+      "related": ["admin/security", "rm/index", "reference/testing"]
+    },
+    "reference/assets": {
+      "title": "Assets WM",
+      "navTitle": "Assets",
+      "summary": "Source manager, Vue, images, fonts, UV, WD и MQR.",
+      "status": "current",
+      "tags": ["css", "javascript", "vue", "fonts", "images", "uv", "wd", "mqr"],
+      "file": "reference/assets/index.md",
+      "aside": "reference/assets/aside.md",
+      "related": ["site/assets", "rm/rb", "reference/testing"]
+    },
+    "reference/testing": {
+      "title": "Тестирование проектов WM",
+      "navTitle": "Тестирование",
+      "summary": "Root test, smoke matrix, safety и формат результата.",
+      "status": "current",
+      "tags": ["test", "smoke", "php", "browser", "wd"],
+      "file": "reference/testing/index.md",
+      "aside": "reference/testing/aside.md",
+      "related": ["wm/development", "reference/api", "reference/assets"]
+    },
+    "reference/htaccess": {
+      "title": ".htaccess и rewrite chains",
+      "navTitle": ".htaccess",
+      "summary": "Порядок rewrite, front controllers, private paths и HTTP checks.",
+      "status": "unresolved",
+      "tags": ["apache", "htaccess", "rewrite", "routing", "security"],
+      "file": "reference/htaccess/index.md",
+      "related": ["site/routing", "admin/routing", "reference/api"]
+    },
+    "sug/index": {
+      "title": "Предложения по развитию",
+      "navTitle": "Предложения sug",
+      "summary": "Сквозная нумерация, approval и граница между идеей и реализацией.",
+      "status": "current",
+      "tags": ["proposal", "approval", "sug"],
+      "file": "sug/index.md",
+      "related": ["wm/development", "wm/versioning"]
+    },
+    "log/index": {
+      "title": "Журнал изменений",
+      "navTitle": "Журнал · обзор",
+      "summary": "Записи по датам, страницам и модулям.",
+      "status": "current",
+      "kind": "log-index",
+      "tags": ["log", "history", "changes"],
+      "file": "log/index.md",
+      "related": ["wm/versioning", "sug/index"]
+    },
+    "log/2026/0831-rule-ai": {
+      "title": "Нормализация rule/ai",
+      "navTitle": "31.08 · rule/ai",
+      "summary": "Этап =1: единый корпус правил и решений владельца.",
+      "status": "current",
+      "kind": "log",
+      "date": "2026-08-31",
+      "pages": ["wm/index", "wm/development"],
+      "modules": ["rule-ai", "documentation", "governance"],
+      "tags": ["log", "rule-ai", "20.0.2"],
+      "file": "log/2026/0831-rule-ai.md",
+      "related": ["log/index", "wm/development"]
+    },
+    "log/2026/0901-agents-aidocs": {
+      "title": "AGENTS.md и aidocs",
+      "navTitle": "01.09 · AGENTS/aidocs",
+      "summary": "Этап =2: agent-first entry и точные карты framework.",
+      "status": "current",
+      "kind": "log",
+      "date": "2026-09-01",
+      "pages": ["wm/index", "wm/architecture", "rm/index", "reference/php"],
+      "modules": ["agents", "aidocs", "php", "routing", "resources"],
+      "tags": ["log", "aidocs", "20.0.3"],
+      "file": "log/2026/0901-agents-aidocs.md",
+      "related": ["log/index", "wm/architecture"]
+    },
+    "log/2026/0901-documentation-site": {
+      "title": "Автономный Documentation Site",
+      "navTitle": "01.09 · Documentation Site",
+      "summary": "Этап =3: PHP/Markdown сайт внутри man.",
+      "status": "current",
+      "kind": "log",
+      "date": "2026-09-01",
+      "pages": ["wm/index", "site/index", "admin/index", "rm/index", "log/index"],
+      "modules": ["man", "documentation-site", "markdown", "ui"],
+      "tags": ["log", "man", "20.0.4"],
+      "file": "log/2026/0901-documentation-site.md",
+      "related": ["log/index", "wm/index"]
+    }
+  }
+}
