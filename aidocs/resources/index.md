@@ -16,7 +16,9 @@ Status: current map; отдельные карточки помечают legacy
 6. [admin.md](admin.md) — подтверждённые legacy manager/entry и отсутствующий
    committed root нового admin RM.
 7. [gss3.md](gss3.md) — project RM из current-примера `.vmk4/gss3`.
-8. [templates.md](templates.md) — template contract и Vue-пары.
+8. [blank-rm.md](blank-rm.md) — минимальный исполняемый named RM и его
+   диагностический контракт.
+9. [templates.md](templates.md) — template contract и Vue-пары.
 
 ## Неподвижные правила
 

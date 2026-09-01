@@ -42,6 +42,7 @@
       "title": "Resource Managers",
       "items": [
         "rm/index",
+        "rm/blank-rm",
         "rm/rb",
         "rm/lay",
         "rm/site",
@@ -67,7 +68,9 @@
         "log/index",
         "log/2026/0831-rule-ai",
         "log/2026/0901-agents-aidocs",
-        "log/2026/0901-documentation-site"
+        "log/2026/0901-documentation-site",
+        "log/2026/0901-3-blank-rm-task",
+        "log/2026/0901-3-blank-rm-result"
       ]
     }
   ],
@@ -211,7 +214,17 @@
       "status": "current",
       "tags": ["rm", "resource", "connector", "component"],
       "file": "rm/index.md",
-      "related": ["rm/rb", "rm/lay", "rm/site", "rm/gss3"]
+      "related": ["rm/blank-rm", "rm/rb", "rm/lay", "rm/site", "rm/gss3"]
+    },
+    "rm/blank-rm": {
+      "title": "blank/rm — минимальный v2 RM",
+      "navTitle": "blank/rm · smoke",
+      "summary": "Исполняемая проверка IQ, connector, template и source manager.",
+      "status": "not-run",
+      "tags": ["rm", "blank", "smoke", "template", "source"],
+      "file": "rm/blank-rm/index.md",
+      "aside": "rm/blank-rm/aside.md",
+      "related": ["rm/index", "reference/testing", "reference/assets"]
     },
     "rm/rb": {
       "title": "RB — базовые ресурсы WM",
@@ -358,6 +371,32 @@
       "tags": ["log", "man", "20.0.4"],
       "file": "log/2026/0901-documentation-site.md",
       "related": ["log/index", "wm/index"]
+    },
+    "log/2026/0901-3-blank-rm-task": {
+      "title": "Задание =4: blank/rm",
+      "navTitle": "01.09 · =4 задание",
+      "summary": "Нормализованная постановка первого executable RM smoke.",
+      "status": "current",
+      "kind": "log",
+      "date": "2026-09-01",
+      "pages": ["rm/blank-rm", "rm/index", "reference/testing"],
+      "modules": ["blank-rm", "iq-pro", "resource-manager", "testing"],
+      "tags": ["log", "task", "blank-rm", "20.0.5"],
+      "file": "log/2026/09-01 - 3-blank-rm.md",
+      "related": ["log/2026/0901-3-blank-rm-result", "rm/blank-rm"]
+    },
+    "log/2026/0901-3-blank-rm-result": {
+      "title": "Результат =4: blank/rm",
+      "navTitle": "01.09 · =4 результат",
+      "summary": "Named RM реализован; static checks пройдены, PHP runtime не запущен.",
+      "status": "not-run",
+      "kind": "log",
+      "date": "2026-09-01",
+      "pages": ["rm/blank-rm", "rm/index", "reference/testing"],
+      "modules": ["blank-rm", "iq-pro", "resource-manager", "testing"],
+      "tags": ["log", "result", "blank-rm", "20.0.5"],
+      "file": "log/2026/09-01 - 3-blank-rm=.md",
+      "related": ["log/2026/0901-3-blank-rm-task", "rm/blank-rm"]
     }
   }
 }

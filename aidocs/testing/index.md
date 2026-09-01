@@ -24,9 +24,14 @@ These paths are historical/support material, not the default for a new project:
 | `r/rb/vue/re/.../test` | research/vendor example |
 | `.blank/test-blank`, `.blank2/test-blank` | blank examples only |
 | `.vmk4/gss3/test` | directory exists, contains no tests in snapshot |
+| `blank/rm` | targeted v2 named RM smoke; static checked, PHP/HTTP not run |
 
 There is no top-level `.test` project overlay in the inventoried root; similarly
 named test directories must be evaluated by exact path.
+
+`blank/rm` is the first committed executable framework smoke, but it checks one
+isolated RM contract only. It does not replace the full project matrix in
+`smoke-suite.md`.
 
 ## Документы
 
