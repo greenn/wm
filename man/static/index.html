@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#6f4a94">
+    <meta name="description" content="Документация разработчика WM: архитектура, страницы, RM, API и рабочие процессы.">
+    <title>WM Developer Docs</title>
+    <link rel="stylesheet" href="assets/app.css">
+</head>
+<body data-default-doc="wm/index">
+    <a class="skip-link" href="#document">Перейти к документу</a>
+
+    <div class="app-frame">
+        <header class="topbar">
+            <button class="icon-button nav-toggle" type="button" data-nav-toggle
+                    aria-controls="primary-navigation" aria-expanded="false"
+                    title="Открыть разделы документации">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span class="sr-only" data-nav-label>Открыть навигацию</span>
+            </button>
+
+            <a class="brand" href="?doc=wm%2Findex" data-doc-id="wm/index"
+               title="На титульную страницу WM Developer Docs">
+                <span class="brand-mark" aria-hidden="true"><b>w</b>m</span>
+                <span class="brand-copy">
+                    <strong>WM</strong>
+                    <small>Developer Docs</small>
+                </span>
+            </a>
+
+            <div class="topbar-context">
+                <span class="eyebrow">Human documentation</span>
+                <span class="runtime-pill" title="Целевая версия PHP framework">PHP 7.2 · v2</span>
+            </div>
+        </header>
+
+        <div class="workspace">
+            <aside class="sidebar" id="primary-navigation" aria-label="Разделы документации">
+                <div class="sidebar-head">
+                    <label class="search-box" title="Фильтр по названиям, описаниям и тегам">
+                        <span aria-hidden="true">⌕</span>
+                        <span class="sr-only">Найти документ</span>
+                        <input type="search" placeholder="Найти в документации" autocomplete="off" data-search>
+                    </label>
+                </div>
+                <nav class="nav-tree" data-navigation></nav>
+                <footer class="sidebar-foot">
+                    <span data-doc-count>Загрузка карты…</span>
+                    <a href="../../aidocs/README.md" title="Открыть точную agent-first карту WM">aidocs ↗</a>
+                </footer>
+            </aside>
+
+            <main class="document-pane" id="document" tabindex="-1">
+                <div class="document-toolbar">
+                    <nav class="breadcrumbs" aria-label="Путь документа" data-breadcrumbs></nav>
+                    <span class="status-badge" data-status>loading</span>
+                </div>
+
+                <article class="markdown-body" data-document aria-live="polite">
+                    <div class="loading-state">
+                        <span class="loading-dot" aria-hidden="true"></span>
+                        Загружаем первый документ…
+                    </div>
+                </article>
+            </main>
+
+            <aside class="context-rail" aria-label="Примеры и содержание">
+                <div class="context-inner" data-context>
+                    <div class="context-loading">Готовим примеры и оглавление…</div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <div class="nav-scrim" data-nav-scrim hidden></div>
+    <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
+
+    <script src="assets/app.js" defer></script>
+</body>
+</html>
