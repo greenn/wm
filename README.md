@@ -1,6 +1,6 @@
 # WM
 
-WM `20.0.4` — общий PHP-фреймворк и ресурсная база для сайтов и приложений.
+WM `20.0.5` — общий PHP-фреймворк и ресурсная база для сайтов и приложений.
 
 - Runtime: PHP 7.2 с обязательным `short_open_tag=On`.
 - Новый frontend-код: Vue 3; Vue 2 считается legacy.
@@ -12,5 +12,7 @@ WM `20.0.4` — общий PHP-фреймворк и ресурсная база
   [aidocs](aidocs/README.md) — точная внутренняя карта кода и контрактов.
 - [man](man/README.md) — автономный human-facing Documentation Site на
   PHP/Markdown.
+- [blank/rm](blank/rm/index.php) — исполняемый v2 RM-тест;
+  [контракт и запуск](aidocs/resources/blank-rm.md).
 
 Внешние dot-проекты используются как примеры, но не входят в Git-репозиторий WM.

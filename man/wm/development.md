@@ -36,6 +36,9 @@ Legacy читается точечно, когда требуется сопро
 Тесты по умолчанию находятся в project root `test/`. Component-local test —
 исключение, когда внутренний context нельзя воспроизвести иначе.
 
+[Исполняемый blank/rm](doc:wm/blank-rm) показывает минимальный v2 RM-контракт
+и проверяет connector, template и assets при каждом открытии страницы.
+
 ## Безопасные границы
 
 Не переносите в source или документацию credentials, tokens, settings values,

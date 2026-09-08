@@ -24,12 +24,14 @@ These paths are historical/support material, not the default for a new project:
 | `r/rb/vue/re/.../test` | research/vendor example |
 | `.blank/test-blank`, `.blank2/test-blank` | blank examples only |
 | `.vmk4/gss3/test` | directory exists, contains no tests in snapshot |
+| `blank/rm` | isolated v2 RM smoke; PHP 7.2.34, HTTP and browser PASS on 2026-09-08 |
 
 There is no top-level `.test` project overlay in the inventoried root; similarly
 named test directories must be evaluated by exact path.
 
 ## Документы
 
+- [blank/rm](../resources/blank-rm.md) — six checks, failure cases and launch command.
 - [smoke-suite.md](smoke-suite.md) — mandatory project matrix.
 - [test-writing.md](test-writing.md) — isolation, output and evidence rules.
 

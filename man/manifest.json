@@ -13,6 +13,7 @@
         "wm/architecture",
         "wm/bootstrap",
         "wm/development",
+        "wm/blank-rm",
         "wm/versioning",
         "wm/legacy"
       ]
@@ -67,11 +68,34 @@
         "log/index",
         "log/2026/0831-rule-ai",
         "log/2026/0901-agents-aidocs",
-        "log/2026/0901-documentation-site"
+        "log/2026/0901-documentation-site",
+        "log/2026/0908-blank-rm"
       ]
     }
   ],
   "documents": {
+    "wm/blank-rm": {
+      "title": "Первый работающий ресурсный модуль",
+      "navTitle": "blank/rm · исполняемый пример",
+      "summary": "IQ v2, named RM, connector, template и проверенные assets.",
+      "status": "current",
+      "tags": ["rm", "blank-rm", "testing", "iq"],
+      "file": "wm/blank-rm/index.md",
+      "related": ["rm/index", "wm/development", "reference/testing"]
+    },
+    "log/2026/0908-blank-rm": {
+      "title": "Этап =4: blank/rm в astra-high",
+      "navTitle": "08.09 · blank/rm",
+      "summary": "Исполняемый v2 RM с PHP 7.2, HTTP и browser проверками.",
+      "status": "current",
+      "kind": "log",
+      "date": "2026-09-08",
+      "pages": ["wm/blank-rm", "rm/index", "reference/testing"],
+      "modules": ["blank-rm", "iq", "resources", "testing"],
+      "tags": ["log", "blank-rm", "20.0.5"],
+      "file": "log/2026/0908-blank-rm.md",
+      "related": ["wm/blank-rm", "log/index"]
+    },
     "wm/index": {
       "title": "WM за 10 минут",
       "navTitle": "Начало работы",
