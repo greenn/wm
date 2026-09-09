@@ -26,7 +26,8 @@ Shared `web` и `man` не копируются в новый project при cen
 
 ## Карты
 
-- [wm-0.md](wm-0.md) — planned sibling project.
+- [blank2.md](blank2.md) — выполненный этап `=5` в реальном OpenServer root.
+- [wm-0.md](wm-0.md) — исходный план sibling project, путь переопределён владельцем.
 - [vmk4-gss3.md](vmk4-gss3.md) — current structural example и blockers.
 - [dot-projects.md](dot-projects.md) — excluded overlays.
 - [blanks.md](blanks.md) — committed `.blank/.blank2`.

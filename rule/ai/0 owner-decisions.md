@@ -81,7 +81,10 @@
 4. `.blank` и `.blank2` сохраняются и коммитятся; они структурно правильны, но
    могут быть технически незавершёнными.
 5. Продуктовые и каталожные JSON legacy-проектов нельзя массово читать.
-6. Новый проект `wm-0` находится рядом: `J:\dv\wm-0`.
+6. Для этапа `=5` владелец заменил исходный путь `J:\dv\wm-0` на
+   `C:\S17\OpenServer\domains\blank2.wm`, URL `http://blank2.wm/`.
+   Его shared web — `C:\S17\OpenServer\domains\20.web\web`.
+   Это project-specific override исходного задания `=5`, не перенос WM.
 7. Project-owned ядро: `iq.inc`, `index.php`, root `test` и project RM
    (текущий пример — `gss3` с pages/router/components/templates).
 8. Стандартно копируются `r/rb` и `r/lay`; `lay` архитектурно опционален,

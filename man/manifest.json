@@ -14,6 +14,7 @@
         "wm/bootstrap",
         "wm/development",
         "wm/blank-rm",
+        "wm/blank2-project",
         "wm/versioning",
         "wm/legacy"
       ]
@@ -69,11 +70,34 @@
         "log/2026/0831-rule-ai",
         "log/2026/0901-agents-aidocs",
         "log/2026/0901-documentation-site",
-        "log/2026/0908-blank-rm"
+        "log/2026/0908-blank-rm",
+        "log/2026/0909-blank2-project"
       ]
     }
   ],
   "documents": {
+    "wm/blank2-project": {
+      "title": "blank2.wm: первый полный проект v2",
+      "navTitle": "blank2.wm · проект v2",
+      "summary": "Реальный OpenServer project: pages, RM, API, Vue history и UV.",
+      "status": "current",
+      "tags": ["project", "v2", "testing", "blank2"],
+      "file": "wm/blank2-project/index.md",
+      "related": ["wm/blank-rm", "rm/index", "reference/testing"]
+    },
+    "log/2026/0909-blank2-project": {
+      "title": "Этап =5: проект blank2.wm",
+      "navTitle": "09.09 · blank2.wm",
+      "summary": "IQ, pages, RM, Vue и 46 HTTP/API проверок на Apache.",
+      "status": "current",
+      "kind": "log",
+      "date": "2026-09-09",
+      "pages": ["wm/blank2-project", "reference/testing"],
+      "modules": ["blank2", "iq", "routing", "api", "vue", "uv"],
+      "tags": ["log", "blank2", "20.0.6"],
+      "file": "log/2026/0909-blank2-project.md",
+      "related": ["wm/blank2-project", "log/index"]
+    },
     "wm/blank-rm": {
       "title": "Первый работающий ресурсный модуль",
       "navTitle": "blank/rm · исполняемый пример",

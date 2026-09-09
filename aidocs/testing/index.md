@@ -25,6 +25,7 @@ These paths are historical/support material, not the default for a new project:
 | `.blank/test-blank`, `.blank2/test-blank` | blank examples only |
 | `.vmk4/gss3/test` | directory exists, contains no tests in snapshot |
 | `blank/rm` | isolated v2 RM smoke; PHP 7.2.34, HTTP and browser PASS on 2026-09-08 |
+| `C:/S17/OpenServer/domains/blank2.wm/test` | stage =5: 16 PHP contracts, 46 HTTP/API checks; see [blank2](../projects/blank2.md) |
 
 There is no top-level `.test` project overlay in the inventoried root; similarly
 named test directories must be evaluated by exact path.
