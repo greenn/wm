@@ -12,7 +12,8 @@
 ## Реализация
 
 1. Зафиксировать owner, слой и public contract изменяемой сущности.
-2. Сохранить PHP 7.2/short tags/Vue 3/naming.
+2. Сохранить PHP 7.2/short tags/Vue 3/naming; в новом и изменяемом PHP
+   использовать пробелы вокруг `=` и `=>`.
 3. Не создавать параллельный loader/router/RM.
 4. Новый component получает точный `<component>.class.inc`.
 5. Тесты по умолчанию — root `test`; component-local только по необходимости.
@@ -24,6 +25,9 @@
 - Assets: status, Content-Type, output без warning, `qv()`.
 - Vue: mount, API states, route/back/forward/reload.
 - UI: target viewport и `wd` reference/live при наличии.
+- Логотип: ссылка на титульную страницу сайта, `cursor: pointer`, корректный
+  переход также с вложенного URL.
+- PHP-стиль: `$wmRoot = tam_find_wm_root();`, `array('uv' => false)`.
 - Git: scoped diff, diff-check, secret/exclusion scan.
 
 ## Завершение
